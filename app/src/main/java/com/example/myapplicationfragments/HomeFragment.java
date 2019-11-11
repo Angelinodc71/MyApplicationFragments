@@ -36,20 +36,20 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         Button buttonLogin = view.findViewById(R.id.btnLogin);
-        startActivity(new Intent(this, LoginFragment.class));
-        Navigation.findNavController(view).navigate(R.id.LoginFragment);
+        buttonLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.loginFragment);
+
+            }
+        });
+
     }
 
     //    Button buttonLogin = findViewById(R.id.btnLogin);
 //    Button buttonRegister = (Button) findViewById(R.id.btnRegister);
 //
-//        buttonLogin.setOnClickListener(new View.OnClickListener() {
-//        @Override
-//        public void onClick(View view) {
-//            Intent intent = new Intent(MainActivity.this, Login.class);
-//            startActivity(intent);
-//        }
-//    });
+
 //        buttonRegister.setOnClickListener(new View.OnClickListener() {
 //        @Override
 //        public void onClick(View view) {
