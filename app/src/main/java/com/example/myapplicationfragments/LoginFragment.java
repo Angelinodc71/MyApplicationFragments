@@ -35,48 +35,22 @@ public class LoginFragment extends Fragment {
     Button buttonLogin;
     EditText txtEmail;
     EditText txtPassword;
+
     String email;
     String password;
-    public LoginFragment() {
-        // Required empty public constructor
-    }
 
+    public LoginFragment() {
+
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_login, container, false);
     }
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        mAuth = FirebaseAuth.getInstance();
-        txtEmail = view.findViewById(R.id.txtCorreo);
-        txtPassword = view.findViewById(R.id.txtPassword);
-        buttonLogin = view.findViewById(R.id.btnLogin);
-
-        buttonLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                email = txtEmail.toString();
-                password = txtPassword.toString();
-                signIn();
-            }
-        });
-
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        updateUI(currentUser);
-    }
-
     private void updateUI(FirebaseUser currentUser) {
-        if (currentUser !=null) Navigation.findNavController(requireView()).navigate(R.id.homeFragment);
+        if (currentUser != null)
+            Navigation.findNavController(requireView()).navigate(R.id.homeFragment);
 
     }
 
@@ -96,7 +70,30 @@ public class LoginFragment extends Fragment {
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
                             updateUI(null);
                         }
+
+                        // ...
                     }
                 });
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        mAuth = FirebaseAuth.getInstance();
+
+        // Initialize Firebase Auth
+        txtEmail = view.findViewById(R.id.txtUsername);
+        txtPassword = view.findViewById(R.id.txtPassword);
+
+        buttonLogin = view.findViewById(R.id.btnLogin);
+
+        buttonLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                email = txtEmail.getText().toString();
+                password = txtPassword.getText().toString();
+                signIn();
+            }
+        });
     }
 }
