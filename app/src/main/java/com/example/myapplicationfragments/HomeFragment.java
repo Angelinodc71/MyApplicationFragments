@@ -43,6 +43,14 @@ public class HomeFragment extends Fragment {
 
             }
         });
+        Button buttonSkip = view.findViewById(R.id.btnSkip);
+        buttonSkip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.inicioFragment);
+
+            }
+        });
 
     }
 

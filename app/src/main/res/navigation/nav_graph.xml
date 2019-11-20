@@ -21,10 +21,43 @@
         android:id="@+id/registerFragment"
         android:name="com.example.myapplicationfragments.RegisterFragment"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" />
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_inicioFragment2"
+            app:destination="@id/inicioFragment" />
+    </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.myapplicationfragments.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_inicioFragment3"
+            app:destination="@id/inicioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.example.myapplicationfragments.InicioFragment"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" />
+    <fragment
+        android:id="@+id/categoryOneFragment"
+        android:name="com.example.myapplicationfragments.CategoryOneFragment"
+        android:label="fragment_category_one"
+        tools:layout="@layout/fragment_category_one" />
+    <fragment
+        android:id="@+id/categoryTwoFragment"
+        android:name="com.example.myapplicationfragments.CategoryTwoFragment"
+        android:label="fragment_category_two"
+        tools:layout="@layout/fragment_category_two" />
+    <fragment
+        android:id="@+id/categoryThreeFragment"
+        android:name="com.example.myapplicationfragments.CategoryThreeFragment"
+        android:label="fragment_category_three"
+        tools:layout="@layout/fragment_category_three" />
+    <fragment
+        android:id="@+id/categoryFourFragment"
+        android:name="com.example.myapplicationfragments.CategoryFourFragment"
+        android:label="fragment_category_four"
+        tools:layout="@layout/fragment_category_four" />
 </navigation>

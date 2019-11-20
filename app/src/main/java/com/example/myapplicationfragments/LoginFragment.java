@@ -48,9 +48,30 @@ public class LoginFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_login, container, false);
     }
 
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        mAuth = FirebaseAuth.getInstance();
+
+        // Initialize Firebase Auth
+        txtEmail = view.findViewById(R.id.txtCorreo);
+        txtPassword = view.findViewById(R.id.txtPassword);
+
+        buttonLogin = view.findViewById(R.id.btnLogin);
+
+        buttonLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                email = txtEmail.getText().toString();
+                password = txtPassword.getText().toString();
+                signIn();
+            }
+        });
+    }
     private void updateUI(FirebaseUser currentUser) {
         if (currentUser != null)
-            Navigation.findNavController(requireView()).navigate(R.id.homeFragment);
+            Navigation.findNavController(requireView()).navigate(R.id.inicioFragment);
 
     }
 
@@ -76,24 +97,4 @@ public class LoginFragment extends Fragment {
                 });
     }
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        mAuth = FirebaseAuth.getInstance();
-
-        // Initialize Firebase Auth
-        txtEmail = view.findViewById(R.id.txtUsername);
-        txtPassword = view.findViewById(R.id.txtPassword);
-
-        buttonLogin = view.findViewById(R.id.btnLogin);
-
-        buttonLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                email = txtEmail.getText().toString();
-                password = txtPassword.getText().toString();
-                signIn();
-            }
-        });
-    }
 }
