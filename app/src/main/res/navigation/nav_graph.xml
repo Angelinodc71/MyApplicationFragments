@@ -60,4 +60,14 @@
         android:name="com.example.myapplicationfragments.CategoryFourFragment"
         android:label="fragment_category_four"
         tools:layout="@layout/fragment_category_four" />
+    <fragment
+        android:id="@+id/listaElementosFragment"
+        android:name="com.example.myapplicationfragments.ListaNoticiaFragment"
+        android:label="fragment_lista_elementos"
+        tools:layout="@layout/fragment_lista_noticias" />
+    <fragment
+        android:id="@+id/detalleElementoFragment"
+        android:name="com.example.myapplicationfragments.VerNoticiaFragment"
+        android:label="fragment_detalle_elemento"
+        tools:layout="@layout/fragment_detalle_elemento" />
 </navigation>
