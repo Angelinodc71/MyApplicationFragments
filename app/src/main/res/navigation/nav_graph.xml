@@ -69,5 +69,5 @@
         android:id="@+id/detalleElementoFragment"
         android:name="com.example.myapplicationfragments.VerNoticiaFragment"
         android:label="fragment_detalle_elemento"
-        tools:layout="@layout/fragment_detalle_elemento" />
+        tools:layout="@layout/fragment_ver_noticia" />
 </navigation>
