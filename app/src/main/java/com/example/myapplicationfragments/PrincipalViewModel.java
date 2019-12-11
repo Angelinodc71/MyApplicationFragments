@@ -17,10 +17,10 @@ public class PrincipalViewModel extends AndroidViewModel {
     public PrincipalViewModel(@NonNull Application application) {
         super(application);
 
-        rellenarListaElementos();
+        rellenarListaNoticias();
     }
 
-    public void rellenarListaElementos(){
+    public void rellenarListaNoticias(){
         // Thread.sleep(10000);
 
         List<Noticia> noticias = new ArrayList<>();
@@ -35,7 +35,7 @@ public class PrincipalViewModel extends AndroidViewModel {
         listaNoticias.setValue(noticias);
     }
 
-    public void establecerElementoSeleccionado(Noticia noticia) {
+    public void establecerNoticiaSeleccionada(Noticia noticia) {
         noticiaSeleccionada.setValue(noticia);
     }
 }

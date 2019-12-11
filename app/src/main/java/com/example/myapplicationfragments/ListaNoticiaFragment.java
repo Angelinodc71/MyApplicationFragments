@@ -31,7 +31,7 @@ public class ListaNoticiaFragment extends androidx.fragment.app.Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_lista_noticias, container, false);
+        return inflater.inflate(R.layout.fragment_category_one, container, false);
     }
 
     @Override
@@ -69,14 +69,16 @@ public class ListaNoticiaFragment extends androidx.fragment.app.Fragment {
             final Noticia noticia = noticiasArriba.get(position);
 
             holder.tituloTextView.setText(noticia.titulo);
-            holder.categoriaTextView.setText(noticia.categoria);
+            holder.subtituloTextView.setText(noticia.subtitulo);
             holder.imagenTextView.setText(noticia.imagen);
+            holder.categoriaTextView.setText(noticia.categoria);
+
 
 
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    principalViewModel.establecerElementoSeleccionado(noticia);
+                    principalViewModel.establecerNoticiaSeleccionada(noticia);
                     navController.navigate(R.id.detalleElementoFragment);
                 }
             });
@@ -103,24 +105,6 @@ public class ListaNoticiaFragment extends androidx.fragment.app.Fragment {
                 imagenTextView = itemView.findViewById(R.id.textview_imagen);
                 categoriaTextView = itemView.findViewById(R.id.textview_categoria);
             }
-        }
-    }
-}
-
-
-class Fragment {
-
-    void tal(){
-        Adapter a = new Adapter();
-
-        a.setA(10);
-    }
-
-    class Adapter {
-        int a;
-
-        void setA(int a){
-            this.a = a;
         }
     }
 }
