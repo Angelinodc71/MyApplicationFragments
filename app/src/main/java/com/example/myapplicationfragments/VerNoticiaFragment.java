@@ -35,10 +35,10 @@ public class VerNoticiaFragment extends Fragment {
 
         principalViewModel = ViewModelProviders.of(requireActivity()).get(PrincipalViewModel.class);
 
-        tituloTextView = view.findViewById(R.id.textview_titulo);
-        subtituloTextView = view.findViewById(R.id.textview_subtitulo);
-        imagenTextView = view.findViewById(R.id.textview_imagen);
-        categoriaTextView = view.findViewById(R.id.textview_categoria);
+        tituloTextView = view.findViewById(R.id.title);
+        subtituloTextView = view.findViewById(R.id.subtitle);
+        imagenTextView = view.findViewById(R.id.image);
+        categoriaTextView = view.findViewById(R.id.category);
 
         principalViewModel.noticiaSeleccionada.observe(getViewLifecycleOwner(), new Observer<Noticia>() {
             @Override

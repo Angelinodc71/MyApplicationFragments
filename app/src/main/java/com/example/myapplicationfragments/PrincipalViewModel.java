@@ -24,7 +24,7 @@ public class PrincipalViewModel extends AndroidViewModel {
         // Thread.sleep(10000);
 
         List<Noticia> noticias = new ArrayList<>();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 1; i < 51; i++) {
             Noticia noticia = new Noticia();
             noticia.titulo = "Titulo:"+i;
             noticia.subtitulo = "Subtitulo:"+i;

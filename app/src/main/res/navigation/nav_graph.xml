@@ -39,7 +39,7 @@
         android:id="@+id/inicioFragment"
         android:name="com.example.myapplicationfragments.InicioFragment"
         android:label="fragment_inicio"
-        tools:layout="@layout/fragment_inicio" />
+        tools:layout="@layout/fragment_menu_inicio" />
     <fragment
         android:id="@+id/categoryOneFragment"
         android:name="com.example.myapplicationfragments.CategoryOneFragment"
@@ -51,23 +51,38 @@
         android:label="fragment_category_two"
         tools:layout="@layout/fragment_category_two" />
     <fragment
-        android:id="@+id/categoryThreeFragment"
-        android:name="com.example.myapplicationfragments.CategoryThreeFragment"
-        android:label="fragment_category_three"
-        tools:layout="@layout/fragment_category_three" />
-    <fragment
-        android:id="@+id/categoryFourFragment"
-        android:name="com.example.myapplicationfragments.CategoryFourFragment"
-        android:label="fragment_category_four"
-        tools:layout="@layout/fragment_category_four" />
-    <fragment
-        android:id="@+id/listaElementosFragment"
-        android:name="com.example.myapplicationfragments.ListaNoticiaFragment"
-        android:label="fragment_lista_elementos"
-        tools:layout="@layout/fragment_lista_noticias" />
-    <fragment
         android:id="@+id/detalleElementoFragment"
         android:name="com.example.myapplicationfragments.VerNoticiaFragment"
         android:label="fragment_detalle_elemento"
         tools:layout="@layout/fragment_ver_noticia" />
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.example.myapplicationfragments.NewsFragment"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news" />
+    <fragment
+        android:id="@+id/messageFragment"
+        android:name="com.example.myapplicationfragments.MessageFragment"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message" />
+    <fragment
+        android:id="@+id/favouriteFragment"
+        android:name="com.example.myapplicationfragments.favouriteFragment"
+        android:label="fragment_favourite"
+        tools:layout="@layout/fragment_favourite" />
+    <fragment
+        android:id="@+id/drawer1Fragment2"
+        android:name="com.example.myapplicationfragments.Drawer1Fragment"
+        android:label="fragment_drawer1"
+        tools:layout="@layout/fragment_drawer1" />
+    <fragment
+        android:id="@+id/drawer2Fragment3"
+        android:name="com.example.myapplicationfragments.Drawer2Fragment"
+        android:label="fragment_drawer2"
+        tools:layout="@layout/fragment_drawer2" />
+    <fragment
+        android:id="@+id/drawer3Fragment3"
+        android:name="com.example.myapplicationfragments.Drawer3Fragment"
+        android:label="fragment_drawer3"
+        tools:layout="@layout/fragment_drawer3" />
 </navigation>
