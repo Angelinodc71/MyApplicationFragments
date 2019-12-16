@@ -71,7 +71,7 @@ public class LoginFragment extends Fragment {
     }
     private void updateUI(FirebaseUser currentUser) {
         if (currentUser != null)
-            Navigation.findNavController(requireView()).navigate(R.id.inicioFragment);
+            Navigation.findNavController(requireView()).navigate(R.id.newsFragment);
 
     }
 

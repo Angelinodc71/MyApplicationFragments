@@ -67,7 +67,7 @@
         tools:layout="@layout/fragment_message" />
     <fragment
         android:id="@+id/favouriteFragment"
-        android:name="com.example.myapplicationfragments.favouriteFragment"
+        android:name="com.example.myapplicationfragments.FavouriteFragment"
         android:label="fragment_favourite"
         tools:layout="@layout/fragment_favourite" />
     <fragment
@@ -85,4 +85,9 @@
         android:name="com.example.myapplicationfragments.Drawer3Fragment"
         android:label="fragment_drawer3"
         tools:layout="@layout/fragment_drawer3" />
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.myapplicationfragments.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" />
 </navigation>

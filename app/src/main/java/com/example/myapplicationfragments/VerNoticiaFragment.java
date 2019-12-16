@@ -14,12 +14,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.myapplicationfragments.model.Noticia;
+
 
 public class VerNoticiaFragment extends Fragment {
 
     PrincipalViewModel principalViewModel;
 
-    TextView tituloTextView, subtituloTextView, imagenTextView, categoriaTextView;
+    TextView tituloTextView;// subtituloTextView, imagenTextView, categoriaTextView;
 
     public VerNoticiaFragment() { }
 
@@ -36,19 +38,14 @@ public class VerNoticiaFragment extends Fragment {
         principalViewModel = ViewModelProviders.of(requireActivity()).get(PrincipalViewModel.class);
 
         tituloTextView = view.findViewById(R.id.title);
-        subtituloTextView = view.findViewById(R.id.subtitle);
-        imagenTextView = view.findViewById(R.id.image);
-        categoriaTextView = view.findViewById(R.id.category);
-
+        //
         principalViewModel.noticiaSeleccionada.observe(getViewLifecycleOwner(), new Observer<Noticia>() {
             @Override
             public void onChanged (final Noticia noticia) {
                 if (noticia == null) return;
 
-                tituloTextView.setText(noticia.titulo);
-                subtituloTextView.setText(noticia.subtitulo);
-                imagenTextView.setText(noticia.imagen);
-                categoriaTextView.setText(noticia.categoria);
+                tituloTextView.setText(noticia.title);
+                //
             }
         });
     }

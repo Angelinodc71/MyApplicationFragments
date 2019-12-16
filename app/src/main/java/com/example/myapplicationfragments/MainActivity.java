@@ -15,11 +15,16 @@ import android.view.View;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
+    BottomNavigationView navView;
+    int tipoMenu = 2;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final BottomNavigationView navView = findViewById(R.id.nav_view);
+
+        navView = findViewById(R.id.nav_view);
+
 
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.homeFragment, R.id.loginFragment, R.id.registerFragment, R.id.inicioFragment,R.id.newsFragment, R.id.messageFragment, R.id.favouriteFragment).build();
@@ -31,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDestinationChanged(@NonNull NavController controller,
                                              @NonNull NavDestination destination, @Nullable Bundle arguments) {
+
+
+
                 switch (destination.getId()){
                     case R.id.loginFragment:
 //                      toolbar.setVisibility(View.GONE);
@@ -43,9 +51,19 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.homeFragment:
                         navView.setVisibility(View.GONE);
                         break;
+                    case R.id.favouriteFragment:
+                        navView.getMenu().clear();
+                        navView.inflateMenu(R.menu.bottom_nav_menu2);
+                        tipoMenu = 2;
+                        break;
                     default:
 //                      toolbar.setVisibility(View.VISIBLE);
                         navView.setVisibility(View.VISIBLE);
+                        if(tipoMenu != 0){
+                            navView.getMenu().clear();
+                            navView.inflateMenu(R.menu.bottom_nav_menu);
+                        }
+                        tipoMenu = 0;
                 }
             }
         });    }

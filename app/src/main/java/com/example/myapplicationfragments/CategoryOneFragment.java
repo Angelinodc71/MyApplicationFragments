@@ -17,6 +17,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.myapplicationfragments.model.Noticia;
+
 import java.util.List;
 
 
@@ -68,10 +70,10 @@ public class CategoryOneFragment extends androidx.fragment.app.Fragment {
         public void onBindViewHolder(@NonNull NoticiaViewHolder holder, int position) {
             final Noticia noticia = noticiasArriba.get(position);
 
-            holder.tituloTextView.setText(noticia.titulo);
-            holder.subtituloTextView.setText(noticia.subtitulo);
-            holder.imagenTextView.setText(noticia.imagen);
-            holder.categoriaTextView.setText(noticia.categoria);
+            holder.tituloTextView.setText(noticia.title);
+//            holder.subtituloTextView.setText(noticia.subtitulo);
+//            holder.imagenTextView.setText(noticia.imagen);
+//            holder.categoriaTextView.setText(noticia.categoria);
 
 
 
@@ -101,9 +103,9 @@ public class CategoryOneFragment extends androidx.fragment.app.Fragment {
             NoticiaViewHolder(@NonNull View itemView) {
                 super(itemView);
                 tituloTextView = itemView.findViewById(R.id.textview_titulo);
-                subtituloTextView = itemView.findViewById(R.id.textview_subtitulo);
-                imagenTextView = itemView.findViewById(R.id.textview_imagen);
-                categoriaTextView = itemView.findViewById(R.id.textview_categoria);
+//                subtituloTextView = itemView.findViewById(R.id.textview_subtitulo);
+//                imagenTextView = itemView.findViewById(R.id.textview_imagen);
+//                categoriaTextView = itemView.findViewById(R.id.textview_categoria);
             }
         }
     }

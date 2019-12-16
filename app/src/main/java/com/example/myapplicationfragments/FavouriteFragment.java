@@ -13,10 +13,10 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class favouriteFragment extends Fragment {
+public class FavouriteFragment extends Fragment {
 
 
-    public favouriteFragment() {
+    public FavouriteFragment() {
         // Required empty public constructor
     }
 

@@ -6,8 +6,16 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
 
+import com.example.myapplicationfragments.api.NoticiasApiModule;
+import com.example.myapplicationfragments.model.EverythingResponse;
+import com.example.myapplicationfragments.model.Noticia;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class PrincipalViewModel extends AndroidViewModel {
 
@@ -21,18 +29,16 @@ public class PrincipalViewModel extends AndroidViewModel {
     }
 
     public void rellenarListaNoticias(){
-        // Thread.sleep(10000);
 
-        List<Noticia> noticias = new ArrayList<>();
-        for (int i = 1; i < 51; i++) {
-            Noticia noticia = new Noticia();
-            noticia.titulo = "Titulo:"+i;
-            noticia.subtitulo = "Subtitulo:"+i;
-            noticia.imagen = "Imagen:"+i;
-            noticia.categoria = "Categoria:"+i;
-            noticias.add(noticia);
-        }
-        listaNoticias.setValue(noticias);
+        NoticiasApiModule.noticiasApi.obtenerTodo("841ec8cefc034fa78da9adba54bb224a").enqueue(new Callback<EverythingResponse>() {
+            @Override
+            public void onResponse(Call<EverythingResponse> call, Response<EverythingResponse> response) {
+                listaNoticias.postValue(response.body().articles);
+            }
+
+            @Override
+            public void onFailure(Call<EverythingResponse> call, Throwable t) {}
+        });
     }
 
     public void establecerNoticiaSeleccionada(Noticia noticia) {
