@@ -1,5 +1,5 @@
 package com.example.myapplicationfragments.model;
 
-public class Noticia {
+public class NoticiaEverything {
     public String title, urlToImage, author;
 }

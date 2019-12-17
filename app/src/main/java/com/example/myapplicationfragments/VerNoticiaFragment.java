@@ -12,16 +12,18 @@ import androidx.lifecycle.ViewModelProviders;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.myapplicationfragments.model.Noticia;
+import com.example.myapplicationfragments.model.NoticiaEverything;
 
 
 public class VerNoticiaFragment extends Fragment {
 
     PrincipalViewModel principalViewModel;
 
-    TextView tituloTextView;// subtituloTextView, imagenTextView, categoriaTextView;
+    TextView tituloTextView, authorTextView;
+    ImageView imageView;
 
     public VerNoticiaFragment() { }
 
@@ -39,13 +41,15 @@ public class VerNoticiaFragment extends Fragment {
 
         tituloTextView = view.findViewById(R.id.title);
         //
-        principalViewModel.noticiaSeleccionada.observe(getViewLifecycleOwner(), new Observer<Noticia>() {
+        principalViewModel.noticiaSeleccionada.observe(getViewLifecycleOwner(), new Observer<NoticiaEverything>() {
             @Override
-            public void onChanged (final Noticia noticia) {
-                if (noticia == null) return;
+            public void onChanged (final NoticiaEverything noticiaEverything) {
+                if (noticiaEverything == null) return;
 
-                tituloTextView.setText(noticia.title);
-                //
+                tituloTextView.setText(noticiaEverything.title);
+                authorTextView.setText(noticiaEverything.author);
+                //imageView ??
+
             }
         });
     }

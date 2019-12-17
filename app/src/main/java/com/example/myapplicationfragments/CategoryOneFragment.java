@@ -15,9 +15,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.myapplicationfragments.model.Noticia;
+import com.bumptech.glide.Glide;
+import com.example.myapplicationfragments.model.NoticiaEverything;
 
 import java.util.List;
 
@@ -49,16 +51,17 @@ public class CategoryOneFragment extends androidx.fragment.app.Fragment {
         noticiasAdapter = new NoticiasAdapter();
         noticiasRecyclerView.setAdapter(noticiasAdapter);
 
-        principalViewModel.listaNoticias.observe(getViewLifecycleOwner(), new Observer<List<Noticia>>() {
+        principalViewModel.listaNoticias.observe(getViewLifecycleOwner(), new Observer<List<NoticiaEverything>>() {
             @Override
-            public void onChanged(List<Noticia> noticias) {
-                noticiasAdapter.establecerLista(noticias);
+            public void onChanged(List<NoticiaEverything> noticiaEverythings) {
+                noticiasAdapter.establecerLista(noticiaEverythings);
+                // de lo que te da el response o de noticias ??
             }
         });
     }
 
     class NoticiasAdapter extends  RecyclerView.Adapter<NoticiasAdapter.NoticiaViewHolder> {
-        private List<Noticia> noticiasArriba = null;
+        private List<NoticiaEverything> noticiasArriba = null;
 
         @NonNull
         @Override
@@ -68,19 +71,16 @@ public class CategoryOneFragment extends androidx.fragment.app.Fragment {
 
         @Override
         public void onBindViewHolder(@NonNull NoticiaViewHolder holder, int position) {
-            final Noticia noticia = noticiasArriba.get(position);
+            final NoticiaEverything noticiaEverything = noticiasArriba.get(position);
 
-            holder.tituloTextView.setText(noticia.title);
-//            holder.subtituloTextView.setText(noticia.subtitulo);
-//            holder.imagenTextView.setText(noticia.imagen);
-//            holder.categoriaTextView.setText(noticia.categoria);
-
-
+            holder.tituloTextView.setText(noticiaEverything.title);
+            holder.authorTextView.setText(noticiaEverything.author);
+            Glide.with(requireActivity()).load(noticiaEverything.urlToImage).into(holder.imageView);
 
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    principalViewModel.establecerNoticiaSeleccionada(noticia);
+                    principalViewModel.establecerNoticiaSeleccionada(noticiaEverything);
                     navController.navigate(R.id.detalleElementoFragment);
                 }
             });
@@ -91,21 +91,21 @@ public class CategoryOneFragment extends androidx.fragment.app.Fragment {
             return noticiasArriba == null ? 0 : noticiasArriba.size();
         }
 
-        public void establecerLista(List<Noticia> noticias){
-            this.noticiasArriba = noticias;
+        public void establecerLista(List<NoticiaEverything> noticiaEverythings){
+            this.noticiasArriba = noticiaEverythings;
             notifyDataSetChanged();
         }
 
         class NoticiaViewHolder extends RecyclerView.ViewHolder {
 
-            TextView tituloTextView, categoriaTextView, imagenTextView, subtituloTextView;
+            TextView tituloTextView, authorTextView;
+            ImageView imageView;
 
             NoticiaViewHolder(@NonNull View itemView) {
                 super(itemView);
                 tituloTextView = itemView.findViewById(R.id.textview_titulo);
-//                subtituloTextView = itemView.findViewById(R.id.textview_subtitulo);
-//                imagenTextView = itemView.findViewById(R.id.textview_imagen);
-//                categoriaTextView = itemView.findViewById(R.id.textview_categoria);
+                authorTextView = itemView.findViewById(R.id.textview_author);
+                imageView = itemView.findViewById(R.id.image_view);
             }
         }
     }

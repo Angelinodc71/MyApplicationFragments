@@ -17,7 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.myapplicationfragments.model.Noticia;
+import com.example.myapplicationfragments.model.NoticiaEverything;
 
 import java.util.List;
 
@@ -49,16 +49,16 @@ public class ListaNoticiaFragment extends androidx.fragment.app.Fragment {
         noticiasAdapter = new NoticiasAdapter();
         noticiasRecyclerView.setAdapter(noticiasAdapter);
 
-        principalViewModel.listaNoticias.observe(getViewLifecycleOwner(), new Observer<List<Noticia>>() {
+        principalViewModel.listaNoticias.observe(getViewLifecycleOwner(), new Observer<List<NoticiaEverything>>() {
             @Override
-            public void onChanged(List<Noticia> noticias) {
-                noticiasAdapter.establecerLista(noticias);
+            public void onChanged(List<NoticiaEverything> noticiaEverythings) {
+                noticiasAdapter.establecerLista(noticiaEverythings);
             }
         });
     }
 
     class NoticiasAdapter extends  RecyclerView.Adapter<NoticiasAdapter.NoticiaViewHolder> {
-        private List<Noticia> noticiasArriba = null;
+        private List<NoticiaEverything> noticiasArriba = null;
 
         @NonNull
         @Override
@@ -68,16 +68,16 @@ public class ListaNoticiaFragment extends androidx.fragment.app.Fragment {
 
         @Override
         public void onBindViewHolder(@NonNull NoticiaViewHolder holder, int position) {
-            final Noticia noticia = noticiasArriba.get(position);
+            final NoticiaEverything noticiaEverything = noticiasArriba.get(position);
 
-            holder.tituloTextView.setText(noticia.title);
+            holder.tituloTextView.setText(noticiaEverything.title);
             //
 
 
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    principalViewModel.establecerNoticiaSeleccionada(noticia);
+                    principalViewModel.establecerNoticiaSeleccionada(noticiaEverything);
                     navController.navigate(R.id.detalleElementoFragment);
                 }
             });
@@ -88,8 +88,8 @@ public class ListaNoticiaFragment extends androidx.fragment.app.Fragment {
             return noticiasArriba == null ? 0 : noticiasArriba.size();
         }
 
-        public void establecerLista(List<Noticia> noticias){
-            this.noticiasArriba = noticias;
+        public void establecerLista(List<NoticiaEverything> noticiaEverythings){
+            this.noticiasArriba = noticiaEverythings;
             notifyDataSetChanged();
         }
 

@@ -8,9 +8,8 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.example.myapplicationfragments.api.NoticiasApiModule;
 import com.example.myapplicationfragments.model.EverythingResponse;
-import com.example.myapplicationfragments.model.Noticia;
+import com.example.myapplicationfragments.model.NoticiaEverything;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -19,8 +18,8 @@ import retrofit2.Response;
 
 public class PrincipalViewModel extends AndroidViewModel {
 
-    MutableLiveData<List<Noticia>> listaNoticias = new MutableLiveData<>();
-    MutableLiveData<Noticia> noticiaSeleccionada = new MutableLiveData<>();
+    MutableLiveData<List<NoticiaEverything>> listaNoticias = new MutableLiveData<>();
+    MutableLiveData<NoticiaEverything> noticiaSeleccionada = new MutableLiveData<>();
 
     public PrincipalViewModel(@NonNull Application application) {
         super(application);
@@ -41,7 +40,7 @@ public class PrincipalViewModel extends AndroidViewModel {
         });
     }
 
-    public void establecerNoticiaSeleccionada(Noticia noticia) {
-        noticiaSeleccionada.setValue(noticia);
+    public void establecerNoticiaSeleccionada(NoticiaEverything noticiaEverything) {
+        noticiaSeleccionada.setValue(noticiaEverything);
     }
 }

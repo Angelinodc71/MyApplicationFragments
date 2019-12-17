@@ -21,25 +21,12 @@
         android:id="@+id/registerFragment"
         android:name="com.example.myapplicationfragments.RegisterFragment"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" >
-        <action
-            android:id="@+id/action_registerFragment_to_inicioFragment2"
-            app:destination="@id/inicioFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_register" />
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.myapplicationfragments.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login">
-        <action
-            android:id="@+id/action_loginFragment_to_inicioFragment3"
-            app:destination="@id/inicioFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/inicioFragment"
-        android:name="com.example.myapplicationfragments.InicioFragment"
-        android:label="fragment_inicio"
-        tools:layout="@layout/fragment_menu_inicio" />
+        tools:layout="@layout/fragment_login"/>
     <fragment
         android:id="@+id/categoryOneFragment"
         android:name="com.example.myapplicationfragments.CategoryOneFragment"
@@ -70,21 +57,6 @@
         android:name="com.example.myapplicationfragments.FavouriteFragment"
         android:label="fragment_favourite"
         tools:layout="@layout/fragment_favourite" />
-    <fragment
-        android:id="@+id/drawer1Fragment2"
-        android:name="com.example.myapplicationfragments.Drawer1Fragment"
-        android:label="fragment_drawer1"
-        tools:layout="@layout/fragment_drawer1" />
-    <fragment
-        android:id="@+id/drawer2Fragment3"
-        android:name="com.example.myapplicationfragments.Drawer2Fragment"
-        android:label="fragment_drawer2"
-        tools:layout="@layout/fragment_drawer2" />
-    <fragment
-        android:id="@+id/drawer3Fragment3"
-        android:name="com.example.myapplicationfragments.Drawer3Fragment"
-        android:label="fragment_drawer3"
-        tools:layout="@layout/fragment_drawer3" />
     <fragment
         android:id="@+id/menuFragment"
         android:name="com.example.myapplicationfragments.MenuFragment"

@@ -9,18 +9,12 @@
         android:layout_height="wrap_content"
         android:textSize="24sp"
         android:textStyle="bold" />
-    <TextView
-        android:id="@+id/textview_subtitulo"
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24sp"/>
+        android:id="@+id/image_view"/>
     <TextView
-        android:id="@+id/textview_imagen"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"/>
-    <TextView
-        android:id="@+id/textview_categoria"
+        android:id="@+id/textview_author"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="24sp"/>

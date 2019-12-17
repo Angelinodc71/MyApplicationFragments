@@ -16,24 +16,15 @@
             android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/subtitle"
-            android:textSize="24sp"
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
+            android:layout_height="wrap_content"
+            android:id="@+id/image"/>
         <TextView
-            android:id="@+id/image"
-            android:textSize="24sp"
+            android:id="@+id/author"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/category"
-            android:textSize="24sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textSize="24sp"/>
 
     </LinearLayout>
 
