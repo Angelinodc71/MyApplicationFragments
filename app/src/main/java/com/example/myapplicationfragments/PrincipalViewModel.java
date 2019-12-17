@@ -1,6 +1,7 @@
 package com.example.myapplicationfragments;
 
 import android.app.Application;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
@@ -29,10 +30,14 @@ public class PrincipalViewModel extends AndroidViewModel {
 
     public void rellenarListaNoticias(){
 
-        NoticiasApiModule.noticiasApi.obtenerTodo("841ec8cefc034fa78da9adba54bb224a").enqueue(new Callback<EverythingResponse>() {
+        NoticiasApiModule.noticiasApi.obtenerTodo("841ec8cefc034fa78da9adba54bb224a", "sports").enqueue(new Callback<EverythingResponse>() {
             @Override
             public void onResponse(Call<EverythingResponse> call, Response<EverythingResponse> response) {
-                listaNoticias.postValue(response.body().articles);
+                if(response != null && response.body() != null) {
+                    listaNoticias.postValue(response.body().articles);
+                } else {
+                    Log.e("ABCD", "Error obteniendo respuesta de la api");
+                }
             }
 
             @Override

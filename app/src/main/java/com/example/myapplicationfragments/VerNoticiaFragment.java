@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.myapplicationfragments.model.NoticiaEverything;
 
 
@@ -40,7 +41,9 @@ public class VerNoticiaFragment extends Fragment {
         principalViewModel = ViewModelProviders.of(requireActivity()).get(PrincipalViewModel.class);
 
         tituloTextView = view.findViewById(R.id.title);
-        //
+        authorTextView = view.findViewById(R.id.author);
+        imageView = view.findViewById(R.id.image);
+
         principalViewModel.noticiaSeleccionada.observe(getViewLifecycleOwner(), new Observer<NoticiaEverything>() {
             @Override
             public void onChanged (final NoticiaEverything noticiaEverything) {
@@ -48,8 +51,7 @@ public class VerNoticiaFragment extends Fragment {
 
                 tituloTextView.setText(noticiaEverything.title);
                 authorTextView.setText(noticiaEverything.author);
-                //imageView ??
-
+                Glide.with(requireActivity()).load(noticiaEverything.urlToImage).into(imageView);
             }
         });
     }

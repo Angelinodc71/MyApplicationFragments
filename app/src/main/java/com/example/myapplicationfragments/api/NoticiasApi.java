@@ -15,7 +15,7 @@ public interface NoticiasApi {
 
     // top-headlines
     @GET("everything/")
-    Call<EverythingResponse> obtenerTodo(@Query("apiKey") String miclaveApi);
+    Call<EverythingResponse> obtenerTodo(@Query("apiKey") String miclaveApi, @Query("q") String q);
 
 
     @GET("top-headlines/")

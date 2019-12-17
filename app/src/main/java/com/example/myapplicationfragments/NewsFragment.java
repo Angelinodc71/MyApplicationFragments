@@ -48,7 +48,7 @@ public class NewsFragment extends Fragment {
 
         @Override
         public CharSequence getPageTitle(int position) {
-            if (position == 0) return (CharSequence) getResources().getDrawable(R.drawable.ic_periodico);
+            if (position == 0) return "Category1";
             else return "Category2";
         }
 
