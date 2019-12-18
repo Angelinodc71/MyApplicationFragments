@@ -13,6 +13,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -48,7 +49,7 @@ public class NewsFragment extends Fragment {
 
         @Override
         public CharSequence getPageTitle(int position) {
-            if (position == 0) return "Category1";
+            if (position == 0) return "";
             else return "Category2";
         }
 

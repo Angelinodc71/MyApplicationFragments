@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.homeFragment:
                         navView.setVisibility(View.GONE);
                         break;
-                    case R.id.favouriteFragment:
+                    case R.id.detalleElementoFragment:
                         navView.getMenu().clear();
                         navView.inflateMenu(R.menu.bottom_nav_menu2);
                         tipoMenu = 2;

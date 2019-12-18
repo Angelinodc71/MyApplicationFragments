@@ -22,12 +22,12 @@
         tools:layout="@layout/fragment_login"/>
     <fragment
         android:id="@+id/categoryOneFragment"
-        android:name="com.example.myapplicationfragments.CategoryOneFragment"
+        android:name="com.example.myapplicationfragments.CategoryTwoFragment"
         android:label="fragment_category_one"
         tools:layout="@layout/fragment_category_one" />
     <fragment
         android:id="@+id/categoryTwoFragment"
-        android:name="com.example.myapplicationfragments.CategoryTwoFragment"
+        android:name="com.example.myapplicationfragments.CategoryOneFragment"
         android:label="fragment_category_two"
         tools:layout="@layout/fragment_category_two" />
     <fragment
