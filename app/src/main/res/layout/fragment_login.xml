@@ -22,7 +22,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txtCorreo"
+            android:id="@+id/EditextCorreo"
             android:hint="Email"
             android:inputType="text"
             android:layout_marginBottom="15dp"
@@ -39,7 +39,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txtPassword"
+            android:id="@+id/EditextPassword"
             android:hint="Password"
             android:layout_marginBottom="15dp"
             android:layout_marginRight="20dp"

@@ -48,4 +48,7 @@ public class PrincipalViewModel extends AndroidViewModel {
     public void establecerNoticiaSeleccionada(NoticiaEverything noticiaEverything) {
         noticiaSeleccionada.setValue(noticiaEverything);
     }
+
+
+
 }

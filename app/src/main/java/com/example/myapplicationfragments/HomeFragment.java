@@ -32,7 +32,7 @@ public class HomeFragment extends Fragment {
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
         Button buttonLogin = view.findViewById(R.id.btnLogin);
@@ -43,6 +43,15 @@ public class HomeFragment extends Fragment {
 
             }
         });
+
+        Button buttonRegister = view.findViewById(R.id.btnRegister);
+        buttonRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(view).navigate(R.id.registerFragment);
+            }
+        });
+
         Button buttonSkip = view.findViewById(R.id.btnSkip);
         buttonSkip.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -6,10 +6,11 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-import androidx.navigation.ui.NavigationUI;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,13 +18,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-
-import static android.content.ContentValues.TAG;
+import com.example.myapplicationfragments.viewModel.AuthViewModel;
 
 
 /**
@@ -31,13 +26,14 @@ import static android.content.ContentValues.TAG;
  */
 public class LoginFragment extends Fragment {
 
-    private FirebaseAuth mAuth;
     Button buttonLogin;
     EditText txtEmail;
     EditText txtPassword;
 
     String email;
     String password;
+    private AuthViewModel authViewModel;
+    private NavController navController;
 
     public LoginFragment() {
 
@@ -50,13 +46,13 @@ public class LoginFragment extends Fragment {
 
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mAuth = FirebaseAuth.getInstance();
-
+        authViewModel = ViewModelProviders.of(requireActivity()).get(AuthViewModel.class);
+        navController = Navigation.findNavController(view);
         // Initialize Firebase Auth
-        txtEmail = view.findViewById(R.id.txtCorreo);
-        txtPassword = view.findViewById(R.id.txtPassword);
+        txtEmail = view.findViewById(R.id.EditextCorreo);
+        txtPassword = view.findViewById(R.id.EditextPassword);
 
         buttonLogin = view.findViewById(R.id.btnLogin);
 
@@ -65,36 +61,25 @@ public class LoginFragment extends Fragment {
             public void onClick(View view) {
                 email = txtEmail.getText().toString();
                 password = txtPassword.getText().toString();
-                signIn();
+                authViewModel.iniciarSesion(email,password);
+
+            }
+        });
+        authViewModel.estadoDeLaAutenticacion.observe(getViewLifecycleOwner(), new Observer<AuthViewModel.EstadoDeLaAutenticacion>() {
+            @Override
+            public void onChanged(AuthViewModel.EstadoDeLaAutenticacion estadoDeLaAutenticacion) {
+                switch (estadoDeLaAutenticacion){
+                    case AUTENTICADO:
+                        navController.navigate(R.id.newsFragment);
+                        break;
+
+                    case AUTENTICACION_INVALIDA:
+                        Toast.makeText(getContext(), "CREDENCIALES NO VALIDAS", Toast.LENGTH_SHORT).show();
+                        break;
+                }
             }
         });
     }
-    private void updateUI(FirebaseUser currentUser) {
-        if (currentUser != null)
-            Navigation.findNavController(requireView()).navigate(R.id.newsFragment);
 
-    }
-
-
-    public void signIn() {
-        mAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(requireActivity(), new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d(TAG, "signInWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            updateUI(user);
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Log.w(TAG, "signInWithEmail:failure", task.getException());
-                            updateUI(null);
-                        }
-
-                        // ...
-                    }
-                });
-    }
 
 }

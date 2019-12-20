@@ -21,7 +21,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txtUsername"
+            android:id="@+id/EditextUsername"
             android:hint="Username"
             android:layout_marginBottom="15dp"
             android:layout_marginRight="20dp"
@@ -37,7 +37,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txtCorreo"
+            android:id="@+id/EditextCorreo"
             android:hint="Email"
             android:layout_marginBottom="15dp"
             android:layout_marginRight="20dp"
@@ -53,7 +53,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txtCorreoConfirm"
+            android:id="@+id/EditextCorreoConfirm"
             android:hint="Confirm Email"
             android:layout_marginBottom="15dp"
             android:layout_marginRight="20dp"
@@ -69,7 +69,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txtPassword"
+            android:id="@+id/EditextPassword"
             android:hint="Password"
             android:layout_marginBottom="15dp"
             android:layout_marginRight="20dp"
@@ -85,7 +85,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txtPasswordConfirm"
+            android:id="@+id/EditextPasswordConfirm"
             android:hint="Confirm Password"
             android:layout_marginBottom="15dp"
             android:layout_marginRight="20dp"
@@ -116,7 +116,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:hint="REGISTER"
-            android:id="@+id/btnLogin"
+            android:id="@+id/btnRegisterAndLogin"
             android:background="@drawable/btn_redondeado_color"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
