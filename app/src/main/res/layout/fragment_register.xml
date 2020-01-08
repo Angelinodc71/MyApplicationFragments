@@ -117,7 +117,7 @@
             android:layout_marginRight="20dp"
             android:hint="REGISTER"
             android:id="@+id/btnRegisterAndLogin"
-            android:background="@drawable/btn_redondeado_color"
+            android:background="@drawable/btn_redondeado_rojo"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:textSize="20sp"
