@@ -5,16 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".RegisterFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"/>
-    <!--        android:src="@drawable/boxer"-->
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:background="#d8000000"
+        android:background="@color/fondo"
         android:gravity="center"
         android:layout_height="match_parent">
 

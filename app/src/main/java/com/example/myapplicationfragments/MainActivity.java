@@ -43,22 +43,27 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.loginFragment:
 //                      toolbar.setVisibility(View.GONE);
                         navView.setVisibility(View.GONE);
+                        getSupportActionBar().hide();
                         break;
                     case R.id.registerFragment:
 //                      toolbar.setVisibility(View.GONE);
                         navView.setVisibility(View.GONE);
+                        getSupportActionBar().hide();
                         break;
                     case R.id.homeFragment:
                         navView.setVisibility(View.GONE);
+                        getSupportActionBar().hide();
                         break;
                     case R.id.detalleElementoFragment:
                         navView.getMenu().clear();
                         navView.inflateMenu(R.menu.bottom_nav_menu2);
                         tipoMenu = 2;
+                        getSupportActionBar().show();
                         break;
                     default:
 //                      toolbar.setVisibility(View.VISIBLE);
                         navView.setVisibility(View.VISIBLE);
+                        getSupportActionBar().show();
                         if(tipoMenu != 0){
                             navView.getMenu().clear();
                             navView.inflateMenu(R.menu.bottom_nav_menu);

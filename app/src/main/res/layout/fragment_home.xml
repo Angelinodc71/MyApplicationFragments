@@ -8,7 +8,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:background="#d8000000"
+        android:background="@color/fondo"
         android:gravity="center"
         android:layout_height="match_parent">
 
@@ -16,6 +16,7 @@
             android:layout_width="250dp"
             android:layout_height="250dp"
             app:civ_border_color="#27AE60"
+            android:src="@drawable/news_logo"
             app:civ_border_width="4dp"
             app:civ_shadow="true"
             app:civ_shadow_radius="10"
@@ -28,7 +29,6 @@
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginBottom="15dp"
-            android:layout_marginTop="60dp"
             android:text="@string/login_with_facebook"
             android:fontFamily="@font/poppins_bold"
             android:background="@drawable/btn_redondeado_facebook"
@@ -80,7 +80,7 @@
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginBottom="5dp"
-            android:text="@string/skip"
+            android:text="Skip"
             android:fontFamily="@font/poppins_bold"
             android:background="@drawable/btn_redondeado_gris"
             android:textColor="#403f3f"
