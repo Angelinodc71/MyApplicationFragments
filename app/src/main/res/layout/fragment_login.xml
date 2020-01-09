@@ -5,13 +5,6 @@
     android:layout_height="match_parent"
     tools:context=".LoginFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"/>
-<!--        android:src="@drawable/boxer"-->
-
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
@@ -23,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/EditextCorreo"
-            android:hint="Email"
+            android:hint="@string/email"
             android:inputType="text"
             android:layout_marginBottom="15dp"
             android:layout_marginRight="20dp"
@@ -40,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/EditextPassword"
-            android:hint="Password"
+            android:hint="@string/password"
             android:layout_marginBottom="15dp"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
@@ -56,8 +49,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btnForgetPassword"
+            android:id="@+id/txtForgetPassword"
             android:text="@string/text_subrayadoLogin"
+            android:fontFamily="@font/poppins_bold"
             android:layout_marginRight="25dp"
             android:layout_marginLeft="20dp"
             android:layout_marginBottom="30dp"
@@ -67,11 +61,12 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/btnLogin"
             android:layout_marginBottom="30dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:hint="LOGIN"
-            android:id="@+id/btnLogin"
+            android:hint="@string/login"
+            android:fontFamily="@font/poppins_bold"
             android:background="@drawable/btn_redondeado_rojo"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
@@ -89,7 +84,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="¿Aún no tienes cuenta?"
+                android:text="@string/a_n_no_tienes_cuenta"
                 android:textSize="16sp"
                 android:textColor="@color/white"/>
 
@@ -97,7 +92,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/btnCreateAccount"
-                android:text="CREAR CUENTA"
+                android:text="@string/crear_cuenta"
                 android:background="@android:color/transparent"
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/white"

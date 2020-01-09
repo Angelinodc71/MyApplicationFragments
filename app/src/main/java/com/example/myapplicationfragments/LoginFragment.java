@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myapplicationfragments.viewModel.AuthViewModel;
@@ -55,6 +56,24 @@ public class LoginFragment extends Fragment {
         txtPassword = view.findViewById(R.id.EditextPassword);
 
         buttonLogin = view.findViewById(R.id.btnLogin);
+
+        Button buttonCreateAccount = view.findViewById(R.id.btnCreateAccount);
+        buttonCreateAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.registerFragment);
+
+            }
+        });
+
+        TextView textViewForgetPass = view.findViewById(R.id.txtForgetPassword);
+        textViewForgetPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.newsFragment);
+
+            }
+        });
 
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -55,4 +55,24 @@
         android:name="com.example.myapplicationfragments.MenuFragment"
         android:label="fragment_menu2"
         tools:layout="@layout/fragment_menu" />
+    <fragment
+        android:id="@+id/recoveryPasswordFragment"
+        android:name="com.example.myapplicationfragments.RecoveryPasswordFragment"
+        android:label="fragment_recovery_password"
+        tools:layout="@layout/fragment_recovery_password" />
+    <fragment
+        android:id="@+id/recoveryPasswordFragment2"
+        android:name="com.example.myapplicationfragments.RecoveryPasswordFragment2"
+        android:label="fragment_recovery_password_fragment2"
+        tools:layout="@layout/fragment_recovery_password_fragment2" />
+    <fragment
+        android:id="@+id/recoveryPasswordFragment3"
+        android:name="com.example.myapplicationfragments.RecoveryPasswordFragment3"
+        android:label="fragment_recovery_password_fragment3"
+        tools:layout="@layout/fragment_recovery_password_fragment3" />
+    <fragment
+        android:id="@+id/recoveryPasswordFragment4"
+        android:name="com.example.myapplicationfragments.RecoveryPasswordFragment4"
+        android:label="fragment_recovery_password_fragment4"
+        tools:layout="@layout/fragment_recovery_password_fragment4" />
 </navigation>
