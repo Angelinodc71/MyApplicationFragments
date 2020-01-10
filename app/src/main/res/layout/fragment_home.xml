@@ -12,17 +12,20 @@
         android:gravity="center"
         android:layout_height="match_parent">
 
-        <com.mikhaellopez.circularimageview.CircularImageView
-            android:layout_width="250dp"
-            android:layout_height="250dp"
-            app:civ_border_color="#27AE60"
-            android:src="@drawable/news_logo"
-            app:civ_border_width="4dp"
-            app:civ_shadow="true"
-            app:civ_shadow_radius="10"
-            app:civ_shadow_color="#00695C"
-            android:layout_marginBottom="60dp"
-            android:scaleType="fitCenter" />
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayoutHome"
+            app:tabIndicator="@drawable/background_tab_indicator_dot_blue"
+            app:tabBackground="@drawable/background_amber_dot_3dp"
+            app:tabIndicatorColor="@android:color/holo_red_dark"
+            app:tabIndicatorGravity="center"
+
+            app:tabMaxWidth="12dp"
+            app:tabGravity="center"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" />
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -45,7 +48,7 @@
             android:text="@string/login"
             android:fontFamily="@font/poppins_bold"
             android:background="@drawable/btn_redondeado_rojo"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/white"
             android:elevation="5dp"
             android:textSize="20sp"
             android:id="@+id/btnLogin"/>
@@ -58,7 +61,7 @@
             android:text="@string/register"
             android:fontFamily="@font/poppins_bold"
             android:background="@drawable/btn_redondeado_rojo"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/white"
             android:elevation="5dp"
             android:textSize="20sp"
             android:id="@+id/btnRegister"/>
@@ -70,7 +73,7 @@
             android:layout_marginBottom="5dp"
             android:text="@string/or"
             android:fontFamily="@font/poppins_bold"
-            android:textColor="#757575"
+            android:textColor="@color/gris_fuerte"
             android:textSize="25sp"
             android:id="@+id/txtOr"
             android:layout_gravity="center"/>
@@ -83,12 +86,9 @@
             android:text="Skip"
             android:fontFamily="@font/poppins_bold"
             android:background="@drawable/btn_redondeado_gris"
-            android:textColor="#403f3f"
+            android:textColor="@color/gris_negro"
             android:elevation="5dp"
             android:textSize="20sp"
             android:id="@+id/btnSkip"/>
-
-
-
     </LinearLayout>
 </FrameLayout>

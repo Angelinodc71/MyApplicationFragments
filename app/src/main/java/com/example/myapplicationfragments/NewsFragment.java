@@ -45,7 +45,7 @@ public class NewsFragment extends Fragment {
     }
 
 
-    class DemoPagerAdapter extends FragmentPagerAdapter {
+    static class DemoPagerAdapter extends FragmentPagerAdapter {
 
         public DemoPagerAdapter(@NonNull FragmentManager fm, int behavior) {
             super(fm, behavior);

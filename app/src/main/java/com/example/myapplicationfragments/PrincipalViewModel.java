@@ -7,9 +7,8 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
 
-import com.example.myapplicationfragments.api.NoticiasApiModule;
-import com.example.myapplicationfragments.model.EverythingResponse;
-import com.example.myapplicationfragments.model.NoticiaEverything;
+import com.example.myapplicationfragments.api.*;
+import com.example.myapplicationfragments.model.*;
 
 import java.util.List;
 
