@@ -13,7 +13,21 @@
     <string name="skip">SKIP</string>
     <string name="crear_cuenta">CREAR CUENTA</string>
     <string name="a_n_no_tienes_cuenta">¿Aún no tienes cuenta?</string>
-    <string name="password">Password</string>
     <string name="email">Email</string>
     <string name="find_your_account"><u>Find your Account</u>.</string>
+    <string name="send">send</string>
+    <string name="cancel">cancel</string>
+    <string name="please_check_your_email_for_a_message_with_your_code_your_code_is_6_numbers_long">Please check your email for a message with your code. Your code is 6 numbers long.</string>
+    <string name="enter_the_security_code">Enter the security code</string>
+    <string name="code">Code</string>
+    <string name="correo_gmail_com">correo@gmail.com</string>
+    <string name="are_not_you"><u>Are not you?</u></string>
+    <string name="continuar">continue</string>
+    <string name="choose_a_new_password">Choose a new password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="password">Password</string>
+    <string name="create_a_new_password_that_is_at_least_6_characters_long">Create a new password that is at least 6 characters long.</string>
+    <string name="cerrar">Cerrar</string>
+    <string name="thank_you_for_reviewing_this_information_you_can_access_the_account_settings_at_any_time_to_review_the_decisions_you_have_madre_regarding_your_data_and_manage_settings">Thank you for reviewing this information. You can access the account settings at any time to review the decisions you have madre regarding your data and manage settings.</string>
+    <string name="you_are_done">You are done!</string>
 </resources>
