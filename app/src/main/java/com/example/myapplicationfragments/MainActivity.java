@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.homeFragment, R.id.loginFragment, R.id.registerFragment,R.id.newsFragment, R.id.messageFragment, R.id.favouriteFragment).build();
+                R.id.homeFragment, R.id.loginFragment, R.id.registerFragment,R.id.newsFragment, R.id.messageFragment, R.id.favouriteFragment,
+                R.id.recoveryPasswordFragment, R.id.recoveryPasswordFragment2, R.id.recoveryPasswordFragment3, R.id.recoveryPasswordFragment4).build();
         NavController navController = Navigation.findNavController(this,R.id.nav_host_fragment);
 //        NavigationUI.setupActionBarWithNavController(this,navController,appBarConfiguration);
         NavigationUI.setupWithNavController(navView,navController);
@@ -51,6 +52,22 @@ public class MainActivity extends AppCompatActivity {
                         getSupportActionBar().hide();
                         break;
                     case R.id.homeFragment:
+                        navView.setVisibility(View.GONE);
+                        getSupportActionBar().hide();
+                        break;
+                    case R.id.recoveryPasswordFragment:
+                        navView.setVisibility(View.GONE);
+                        getSupportActionBar().hide();
+                        break;
+                    case R.id.recoveryPasswordFragment2:
+                        navView.setVisibility(View.GONE);
+                        getSupportActionBar().hide();
+                        break;
+                    case R.id.recoveryPasswordFragment3:
+                        navView.setVisibility(View.GONE);
+                        getSupportActionBar().hide();
+                        break;
+                    case R.id.recoveryPasswordFragment4:
                         navView.setVisibility(View.GONE);
                         getSupportActionBar().hide();
                         break;

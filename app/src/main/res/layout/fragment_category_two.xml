@@ -5,13 +5,23 @@
     android:layout_height="match_parent"
 
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".CategoryTwoFragment">
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerview_noticias"
+    tools:context=".CategoryTwoFragment"
+    android:background="@color/fondo">
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:layout_marginBottom="56dp"/>
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/fondo_redondeado_gris">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_noticias"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+    </ScrollView>
+
 
 </FrameLayout>

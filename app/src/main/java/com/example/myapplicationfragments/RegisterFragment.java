@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myapplicationfragments.viewModel.AuthViewModel;
@@ -47,6 +48,15 @@ public class RegisterFragment extends Fragment {
         registerButton = view.findViewById(R.id.btnRegisterAndLogin);
 
         authViewModel.iniciarRegistro();
+
+        TextView textViewLoginHere = view.findViewById(R.id.btnLoginHere);
+        textViewLoginHere.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.loginFragment);
+
+            }
+        });
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
