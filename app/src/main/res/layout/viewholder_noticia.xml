@@ -3,19 +3,25 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/image_view"
+        android:src="@drawable/news_logo"
+        />
     <TextView
         android:id="@+id/textview_titulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="24sp"
+        android:text="Hola"
         android:textStyle="bold" />
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/image_view"/>
+
     <TextView
         android:id="@+id/textview_author"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24sp"/>
+        android:textSize="24sp"
+        android:layout_gravity="end"
+        android:text="Adios"/>
 </FrameLayout>

@@ -36,12 +36,10 @@ public class NewsFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         ViewPager viewPager = view.findViewById(R.id.viewPager);
         viewPager.setAdapter(new NewsFragment.DemoPagerAdapter(getChildFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT));
+
         TabLayout tabLayout = view.findViewById(R.id.tabLayout);
 
         tabLayout.setupWithViewPager(viewPager);
-        tabLayout.getTabAt(0).setIcon(R.drawable.ic_mensage_icon);
-
-
     }
 
 
@@ -51,14 +49,6 @@ public class NewsFragment extends Fragment {
             super(fm, behavior);
         }
 
-        @Override
-        public CharSequence getPageTitle(int position) {
-            if (position == 0) {
-
-                return "";
-            }
-            else return "Category2";
-        }
 
         @NonNull
         @Override
@@ -69,7 +59,7 @@ public class NewsFragment extends Fragment {
 
         @Override
         public int getCount() {
-            return 2;
+            return 3;
         }
 
     }
