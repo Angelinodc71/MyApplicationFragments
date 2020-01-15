@@ -9,7 +9,6 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -20,7 +19,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.myapplicationfragments.model.NoticiaEverything;
-import com.mikepenz.itemanimators.ScaleUpAnimator;
+import com.example.myapplicationfragments.viewModel.PrincipalViewModel;
 
 import java.util.List;
 

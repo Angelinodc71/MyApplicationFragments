@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.myapplicationfragments.model.NoticiaEverything;
+import com.example.myapplicationfragments.viewModel.PrincipalViewModel;
 
 
 public class VerNoticiaFragment extends Fragment {

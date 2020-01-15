@@ -21,6 +21,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        setTheme(R.style.AppTheme);
+
         setContentView(R.layout.activity_main);
 
         navView = findViewById(R.id.nav_view);

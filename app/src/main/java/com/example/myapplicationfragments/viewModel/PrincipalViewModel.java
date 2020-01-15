@@ -1,4 +1,4 @@
-package com.example.myapplicationfragments;
+package com.example.myapplicationfragments.viewModel;
 
 import android.app.Application;
 import android.util.Log;
@@ -16,10 +16,10 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class PrincipalViewModel extends AndroidViewModel {
+ public class PrincipalViewModel extends AndroidViewModel {
 
-    MutableLiveData<List<NoticiaEverything>> listaNoticias = new MutableLiveData<>();
-    MutableLiveData<NoticiaEverything> noticiaSeleccionada = new MutableLiveData<>();
+    public MutableLiveData<List<NoticiaEverything>> listaNoticias = new MutableLiveData<>();
+    public MutableLiveData<NoticiaEverything> noticiaSeleccionada = new MutableLiveData<>();
 
     public PrincipalViewModel(@NonNull Application application) {
         super(application);
