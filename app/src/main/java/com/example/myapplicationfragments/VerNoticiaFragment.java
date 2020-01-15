@@ -23,7 +23,7 @@ public class VerNoticiaFragment extends Fragment {
 
     PrincipalViewModel principalViewModel;
 
-    TextView tituloTextView, authorTextView;
+    TextView tituloTextView, authorTextView, contentTextView;
     ImageView imageView;
 
     public VerNoticiaFragment() { }
@@ -42,6 +42,7 @@ public class VerNoticiaFragment extends Fragment {
 
         tituloTextView = view.findViewById(R.id.title);
         authorTextView = view.findViewById(R.id.author);
+        contentTextView = view.findViewById(R.id.content);
         imageView = view.findViewById(R.id.image);
 
         principalViewModel.noticiaSeleccionada.observe(getViewLifecycleOwner(), new Observer<NoticiaEverything>() {
@@ -52,6 +53,7 @@ public class VerNoticiaFragment extends Fragment {
                 tituloTextView.setText(noticiaEverything.title);
                 authorTextView.setText(noticiaEverything.author);
                 Glide.with(requireActivity()).load(noticiaEverything.urlToImage).into(imageView);
+                contentTextView.setText(noticiaEverything.content);
             }
         });
     }

@@ -20,6 +20,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.myapplicationfragments.model.NoticiaEverything;
+import com.mikepenz.itemanimators.ScaleUpAnimator;
 
 import java.util.List;
 
@@ -46,7 +47,6 @@ public class CategoryTwoFragment extends androidx.fragment.app.Fragment {
         navController = Navigation.findNavController(view);
 
         RecyclerView noticiasRecyclerView = view.findViewById(R.id.recyclerview_noticias);
-        noticiasRecyclerView.addItemDecoration(new DividerItemDecoration(noticiasRecyclerView.getContext(), DividerItemDecoration.VERTICAL));
 
         noticiasAdapter = new NoticiasAdapter();
         noticiasRecyclerView.setAdapter(noticiasAdapter);
@@ -58,6 +58,7 @@ public class CategoryTwoFragment extends androidx.fragment.app.Fragment {
                 // de lo que te da el response o de noticias ??
             }
         });
+
     }
 
     class NoticiasAdapter extends  RecyclerView.Adapter<NoticiasAdapter.NoticiaViewHolder> {
@@ -74,7 +75,11 @@ public class CategoryTwoFragment extends androidx.fragment.app.Fragment {
             final NoticiaEverything noticiaEverything = noticiasArriba.get(position);
 
             holder.tituloTextView.setText(noticiaEverything.title);
+
             holder.authorTextView.setText(noticiaEverything.author);
+            if ("" == holder.authorTextView.getText()){
+                holder.authorTextView.setText("Anonymous");
+            }
             Glide.with(requireActivity()).load(noticiaEverything.urlToImage).into(holder.imageView);
 
             holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -98,7 +103,7 @@ public class CategoryTwoFragment extends androidx.fragment.app.Fragment {
 
         class NoticiaViewHolder extends RecyclerView.ViewHolder {
 
-            TextView tituloTextView, authorTextView;
+            TextView tituloTextView, authorTextView, publishedAtTextView;
             ImageView imageView;
 
             NoticiaViewHolder(@NonNull View itemView) {
@@ -106,6 +111,7 @@ public class CategoryTwoFragment extends androidx.fragment.app.Fragment {
                 tituloTextView = itemView.findViewById(R.id.textview_titulo);
                 authorTextView = itemView.findViewById(R.id.textview_author);
                 imageView = itemView.findViewById(R.id.image_view);
+                publishedAtTextView = itemView.findViewById(R.id.textview_publishedAt);
             }
         }
     }

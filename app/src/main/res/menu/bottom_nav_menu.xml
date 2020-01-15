@@ -5,20 +5,24 @@
         android:id="@+id/menuFragment"
         android:icon="@drawable/ic_menu"
         android:title="Menu"
+        android:actionLayout="@layout/fragment_menu"
         />
 
     <item
         android:id="@+id/newsFragment"
         android:icon="@drawable/ic_periodico"
-        android:title="News" />
+        android:title="News"
+        android:stateListAnimator="@null"/>
 
     <item
         android:id="@+id/messageFragment"
         android:icon="@drawable/ic_mensage_icon"
-        android:title="Message" />
+        android:title="Message"
+        android:stateListAnimator="@null"/>
     <item
         android:id="@+id/favouriteFragment"
         android:icon="@drawable/ic_saved_icon"
-        android:title="Favourites" />
+        android:title="Favourites"
+        android:actionLayout="@layout/fragment_favourite"/>
 
 </menu>
