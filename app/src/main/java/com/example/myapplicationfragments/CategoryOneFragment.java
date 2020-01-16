@@ -34,16 +34,16 @@ public class CategoryOneFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_category_one, container, false);
     }
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        Button buttonSports= view.findViewById(R.id.btn_sports);
-        buttonSports.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.newsFragment);
-            }
-        });
-
-    }
+//    @Override
+//    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+//        super.onViewCreated(view, savedInstanceState);
+//        Button buttonSports= view.findViewById(R.id.btn_sports);
+//        buttonSports.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Navigation.findNavController(view).navigate(R.id.newsFragment);
+//            }
+//        });
+//
+//    }
 }

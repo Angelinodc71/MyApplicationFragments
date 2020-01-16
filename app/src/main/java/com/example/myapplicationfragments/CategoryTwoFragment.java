@@ -80,6 +80,7 @@ public class CategoryTwoFragment extends androidx.fragment.app.Fragment {
                 holder.authorTextView.setText("Anonymous");
             }
             Glide.with(requireActivity()).load(noticiaEverything.urlToImage).into(holder.imageView);
+            holder.publishedAtTextView.setText(noticiaEverything.publishedAt);
 
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

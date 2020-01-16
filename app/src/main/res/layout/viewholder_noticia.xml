@@ -1,33 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:squint="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/btn_redondeado_transparente">
+    android:background="@drawable/btn_redondeado_rojo"
+    android:orientation="vertical"
+    android:layout_marginBottom="15dp">
 
-    <ImageView
-        android:id="@+id/image_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/news_logo" />
-    <TextView
-        android:id="@+id/textview_titulo"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:text="Hola"
-        android:textStyle="bold" />
+        android:background="@drawable/btn_redondeado_transparente">
 
-    <TextView
-        android:id="@+id/textview_author"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:layout_gravity="end"
-        android:text="Adios"/>
-    <TextView
-        android:id="@+id/textview_publishedAt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
-</LinearLayout>
+        <com.intrusoft.squint.DiagonalView
+            android:id="@+id/image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/news_logo"
+            squint:angle="16"
+            squint:diagonalDirection="left_to_right"
+            squint:gravity="left"
+            squint:layout_constraintStart_toStartOf="parent"
+            squint:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textview_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hola"
+            android:lineSpacingMultiplier="0.65"
+            android:textAlignment="textStart"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="18sp"
+            squint:layout_constraintTop_toBottomOf="@+id/image_view" />
+
+        <TextView
+            android:id="@+id/textview_publishedAt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:gravity="end"
+            android:text="Adios"
+            android:fontFamily="@font/poppins_medium"
+            squint:layout_constraintBottom_toTopOf="@+id/textview_author"
+            squint:layout_constraintEnd_toEndOf="parent"
+            squint:layout_constraintHorizontal_bias="0.0"
+            squint:layout_constraintStart_toStartOf="@+id/guideline"
+            squint:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+        <TextView
+            android:id="@+id/textview_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="Bojorn"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins_semibold"
+            squint:layout_constraintBottom_toTopOf="@+id/textview_titulo"
+            squint:layout_constraintEnd_toEndOf="parent"
+            squint:layout_constraintHorizontal_bias="0.0"
+            squint:layout_constraintStart_toStartOf="@+id/guideline"
+            squint:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            squint:layout_constraintGuide_begin="159dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            squint:layout_constraintGuide_begin="131dp" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            squint:barrierDirection="top" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            squint:barrierDirection="left" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

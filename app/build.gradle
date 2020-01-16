@@ -21,6 +21,12 @@ android {
     }
 }
 
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.0.2'
@@ -56,4 +62,5 @@ dependencies {
 
     implementation "com.mikepenz:itemanimators:1.1.0"
 
+    implementation 'com.github.IntruderShanky:Squint:3.0.1'
 }

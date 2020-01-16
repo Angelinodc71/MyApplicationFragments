@@ -12,6 +12,8 @@ public class Usuario {
     public String email;
     public String password;
 
+    //Faltan añadir las nuevas variables
+
     public Usuario(String username, String email, String password) {
         this.username = username;
         this.email = email;
