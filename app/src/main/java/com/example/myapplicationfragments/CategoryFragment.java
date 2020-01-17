@@ -24,14 +24,14 @@ import com.example.myapplicationfragments.viewModel.PrincipalViewModel;
 import java.util.List;
 
 
-public class CategoryTwoFragment extends androidx.fragment.app.Fragment {
+public class CategoryFragment extends androidx.fragment.app.Fragment {
 
     PrincipalViewModel principalViewModel;
     NavController navController;
     NoticiasAdapter noticiasAdapter;
 
 
-    public CategoryTwoFragment() { }
+    public CategoryFragment() { }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

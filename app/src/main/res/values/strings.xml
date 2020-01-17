@@ -37,4 +37,11 @@
     <string name="science">Science</string>
     <string name="sports">Sports</string>
     <string name="technology">Technology</string>
+    <string name="categories">Categories</string>
+    <string name="favourites">Favourites</string>
+    <string name="ayuda">ayuda</string>
+    <string name="acerca_de">acerca de</string>
+    <string name="historial">historial</string>
+    <string name="bloqueados">bloqueados</string>
+    <string name="notificaciones">notificaciones</string>
 </resources>

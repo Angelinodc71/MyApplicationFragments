@@ -19,10 +19,10 @@ import com.google.android.material.tabs.TabLayout;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class CategoryOneFragment extends Fragment {
+public class SwitchCategoriesFragment extends Fragment {
 
 
-    public CategoryOneFragment() {
+    public SwitchCategoriesFragment() {
         // Required empty public constructor
     }
 
