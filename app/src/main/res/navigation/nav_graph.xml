@@ -75,4 +75,14 @@
         android:name="com.example.myapplicationfragments.RecoveryPasswordFragment4"
         android:label="fragment_recovery_password_fragment4"
         tools:layout="@layout/fragment_recovery_password_fragment4" />
+    <fragment
+        android:id="@+id/messageCommentFragment"
+        android:name="com.example.myapplicationfragments.MessageCommentFragment"
+        android:label="fragment_message_comment"
+        tools:layout="@layout/fragment_message_comment" />
+    <fragment
+        android:id="@+id/messageFriendFragment"
+        android:name="com.example.myapplicationfragments.MessageFriendFragment"
+        android:label="fragment_message_friend"
+        tools:layout="@layout/fragment_message_friend" />
 </navigation>
