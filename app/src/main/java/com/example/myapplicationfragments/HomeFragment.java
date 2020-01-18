@@ -41,7 +41,6 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        TabLayout tabLayout = view.findViewById(R.id.tabLayoutHome);
         Button buttonLogin = view.findViewById(R.id.btnLogin);
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
