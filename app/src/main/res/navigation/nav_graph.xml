@@ -24,12 +24,12 @@
         android:id="@+id/categoryOneFragment"
         android:name="com.example.myapplicationfragments.CategoryFragment"
         android:label="fragment_category_one"
-        tools:layout="@layout/fragment_category_two" />
+        tools:layout="@layout/fragment_category" />
     <fragment
         android:id="@+id/categoryTwoFragment"
         android:name="com.example.myapplicationfragments.SwitchCategoriesFragment"
         android:label="fragment_category_two"
-        tools:layout="@layout/fragment_category_one" />
+        tools:layout="@layout/fragment_switch_categories" />
     <fragment
         android:id="@+id/detalleElementoFragment"
         android:name="com.example.myapplicationfragments.VerNoticiaFragment"
