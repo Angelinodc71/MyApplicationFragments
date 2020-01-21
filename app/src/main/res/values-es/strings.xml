@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyApplicationFragments</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_subrayadoLogin"><u>Has olvidado tu contraseña?</u></string>
+    <string name="text_subrayadoRegister"><u>Inicia sesión aquí</u></string>
+    <string name="title_activity_menu_fragment">MenuFragment</string>
+    <string name="or">&amp;</string>
+    <string name="login_with_facebook">Inicia sesión con Facebook</string>
+    <string name="login">Inicia sesión</string>
+    <string name="register">Registrar</string>
+    <string name="skip">skip</string>
+    <string name="crear_cuenta">Crear cuenta</string>
+    <string name="a_n_no_tienes_cuenta">Todavía no tienes cuenta?</string>
+    <string name="email">Correo</string>
+    <string name="find_your_account">Encuentra tu cuenta</string>
+    <string name="send">Enviar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="please_check_your_email_for_a_message_with_your_code_your_code_is_6_numbers_long">
+        Por favor revise su correo electrónico para un mensaje con su código. Su código tiene 6 números de longitud.
+    </string>
+    <string name="enter_the_security_code">Pon tu código de seguridad</string>
+    <string name="code">Código</string>
+    <string name="correo_gmail_com">correo@gmail.com</string>
+    <string name="are_not_you"><u>No eres tú?</u></string>
+    <string name="continuar">Continuar</string>
+    <string name="choose_a_new_password">Elige una nueva contraseña</string>
+    <string name="confirm_password">Confirmar contraseña</string>
+    <string name="password">Contraseña</string>
+    <string name="create_a_new_password_that_is_at_least_6_characters_long">
+        Cree una nueva contraseña que tenga al menos 6 caracteres de longitud.
+    </string>
+    <string name="close">Cerrar</string>
+    <string name="thank_you_for_reviewing_this_information_you_can_access_the_account_settings_at_any_time_to_review_the_decisions_you_have_made_regarding_your_data_and_manage_settings">
+        Gracias por revisar esta información. Puede acceder a la configuración de la cuenta en cualquier momento para revisar las decisiones que ha tomado con respecto a sus datos y la configuración.
+    </string>
+    <string name="you_are_done">Está listo !</string>
+    <string name="username">Nombre de usuario</string>
+    <string name="confirm_email">Confirmar correo</string>
+    <string name="business">Negocios</string>
+    <string name="entertainment">Entretenimiento</string>
+    <string name="general">General</string>
+    <string name="health">Salud</string>
+    <string name="science">Ciencia</string>
+    <string name="sports">Deportes</string>
+    <string name="technology">Tecnologia</string>
+    <string name="categories">Categorías</string>
+    <string name="favourites">Favoritos</string>
+    <string name="ayuda">Ayuda</string>
+    <string name="acerca_de">Acerca de</string>
+    <string name="historial">Historial</string>
+    <string name="bloqueados">Bloqueados</string>
+    <string name="notificaciones">Notificaciones</string>
+    <string name="we_have_sent_your_code_to">Hemos enviado su código a:</string>
+    <string name="please_enter_your_email_or_phone_number_to_search_for_your_account">
+        Ingrese su correo electrónico o número de teléfono para buscar su cuenta
+    </string>
+</resources>

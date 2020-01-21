@@ -115,14 +115,14 @@
             android:layout_marginBottom="30dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:hint="@string/register"
+            android:text="@string/register"
             android:fontFamily="@font/poppins_bold"
             android:id="@+id/btnRegisterAndLogin"
             android:background="@drawable/btn_redondeado_rojo"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:textSize="20sp"
-            android:elevation="5dp"/>
+            android:textAllCaps="true"/>
 
 
     </LinearLayout>

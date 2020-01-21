@@ -3,7 +3,8 @@
 <item android:drawable="@color/colorPrimary"/>
     <item>
         <bitmap
-            android:src="@drawable/ic_launcher"
-            android:gravity="center"/>
+            android:src="@drawable/news_logo"
+            android:gravity="center"
+            android:tint="@color/black"/>
     </item>
 </layer-list>

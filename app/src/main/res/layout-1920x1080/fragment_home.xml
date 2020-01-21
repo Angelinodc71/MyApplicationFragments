@@ -13,24 +13,26 @@
         android:gravity="top|center"
         android:orientation="horizontal"
         android:weightSum="3">
+
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="739dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1"
             android:layout_gravity="center"
+            android:layout_marginLeft="40dp"
             android:layout_marginRight="20dp"
-            android:layout_marginLeft="40dp">
+            android:layout_weight="1"
+            android:orientation="vertical">
+
             <Button
                 android:id="@+id/btnFacebook"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
-                android:background="@drawable/btn_redondeado_facebook"
                 android:layout_marginBottom="40dp"
+                android:background="@drawable/btn_redondeado_facebook"
                 android:fontFamily="@font/poppins_bold"
                 android:text="@string/login_with_facebook"
                 android:textColor="@color/white"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/btnLogin"
@@ -52,7 +54,7 @@
                 android:fontFamily="@font/poppins_bold"
                 android:text="@string/register"
                 android:textColor="@color/white"
-                android:textSize="20sp"/>
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -65,14 +67,14 @@
 
             <TextView
                 android:id="@+id/txtOr"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/poppins_bold"
                 android:text="@string/or"
                 android:textAllCaps="true"
                 android:textColor="@color/gris_fuerte"
-                android:textSize="25sp" />
+                android:textSize="25sp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
