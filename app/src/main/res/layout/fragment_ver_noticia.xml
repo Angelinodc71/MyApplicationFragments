@@ -12,25 +12,18 @@
        android:layout_marginLeft="10dp"
        android:layout_marginTop="20dp"
        android:layout_marginRight="10dp"
-       android:layout_marginBottom="20dp">
+       android:layout_marginBottom="60dp">
        <LinearLayout
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:background="@drawable/fondo_redondeado_gris"
            android:layout_marginBottom="10dp">
-           <ScrollView
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_marginLeft="7dp"
-               android:layout_marginTop="7dp"
-               android:layout_marginRight="7dp"
-               android:layout_marginBottom="10dp">
                <androidx.constraintlayout.widget.ConstraintLayout
                    android:layout_width="match_parent"
-                   android:layout_height="match_parent"
-                   android:layout_marginLeft="5dp"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="10dp"
                    android:layout_marginTop="10dp"
-                   android:layout_marginRight="5dp"
+                   android:layout_marginRight="10dp"
                    android:layout_marginBottom="10dp">
 
                    <ImageView
@@ -83,16 +76,15 @@
                        android:text="content"
                        app:layout_constraintEnd_toEndOf="parent"
                        app:layout_constraintStart_toStartOf="parent"
-                       app:layout_constraintTop_toBottomOf="@+id/title" />
+                       app:layout_constraintTop_toBottomOf="@+id/title"/>
                </androidx.constraintlayout.widget.ConstraintLayout>
-           </ScrollView>
-
        </LinearLayout>
        <LinearLayout
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:background="@drawable/fondo_redondeado_gris"
-           android:orientation="vertical">
+           android:orientation="vertical"
+           android:layout_marginBottom="10dp">
            <TextView
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
@@ -137,6 +129,57 @@
                android:layout_marginBottom="10dp"
                android:text="@string/publicar_comentario"
                android:textAllCaps="false" />
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="234dp"
+           android:background="@drawable/fondo_redondeado_gris"
+           android:orientation="vertical">
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginLeft="10dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginRight="10dp"
+               android:layout_marginBottom="10dp">
+
+               <ImageView
+                   android:id="@+id/imageView1"
+                   android:layout_width="56dp"
+                   android:layout_height="60dp"
+                   android:src="@drawable/image_8"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toStartOf="@+id/textView1"
+                   app:layout_constraintHorizontal_bias="0.0"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+               <TextView
+                   android:id="@+id/textView1"
+                   android:layout_width="wrap_content"
+                   android:layout_height="60dp"
+                   android:background="@drawable/btn_message_view"
+                   android:fontFamily="@font/poppins_medium"
+                   android:lineSpacingMultiplier="0.75"
+                   android:text="@string/lorem_ipsum_corto"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="@id/guideline1"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+               <androidx.constraintlayout.widget.Guideline
+                   android:id="@+id/guideline1"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   app:layout_constraintGuide_begin="56dp" />
+           </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
        </LinearLayout>
    </LinearLayout>
 

@@ -57,4 +57,22 @@
     <string name="deja_un_comentario">Leave a comment</string>
     <string name="comentario">comment</string>
     <string name="publicar_comentario">Post comment</string>
+
+<!--    Lorem ipsums -->
+    <string name="lorem_ipsum_corto">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan molestie risus non facilisis.
+    </string>
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan molestie risus non facilisis.
+        Cras rhoncus elementum massa, ac luctus lacus aliquam vel. Quisque eget eros vel justo laoreet molestie vitae quis dolor.
+        Vivamus vitae orci dui. Suspendisse potenti. Vivamus feugiat pellentesque elementum. Mauris interdum nisi at odio vestibulum semper.
+        Ut eu accumsan magna. Integer mollis tincidunt velit, et rutrum diam laoreet non. In quis eleifend felis.
+        Mauris sollicitudin nibh quis vulputate fringilla. Praesent et velit ut libero iaculis feugiat et non dolor. Proin vitae dapibus leo, vitae interdum nisl.
+        Nunc in ipsum nec magna mollis egestas. Vivamus id quam nec nibh interdum rutrum.
+
+        Donec sem tellus, varius quis enim sit amet, pellentesque feugiat tortor. Nam et convallis orci, sed ornare neque. Nullam at sagittis neque.
+        Maecenas tempus nisi sit amet diam ornare cursus. Nunc viverra nibh quis est convallis malesuada. Nunc porttitor eleifend arcu a commodo.
+        Sed magna augue, luctus eu luctus eu, cursus vel magna. Praesent nec est tellus. Nullam maximus arcu et laoreet dapibus. Quisque laoreet malesuada facilisis.
+        Cras sapien dolor, malesuada nec nulla vitae, pretium dictum lorem. Vestibulum neque velit, facilisis vel metus id, aliquam vulputate ipsum.
+    </string>
 </resources>
