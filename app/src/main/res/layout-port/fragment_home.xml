@@ -91,8 +91,9 @@
                     android:layout_marginBottom="5dp"
                     android:fontFamily="@font/poppins_bold"
                     android:text="@string/or"
+                    android:textAllCaps="true"
                     android:textColor="@color/gris_fuerte"
-                    android:textSize="25sp" />
+                    android:textSize="22sp" />
 
                 <Button
                     android:id="@+id/btnSkip"
