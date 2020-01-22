@@ -1,10 +1,13 @@
 package com.example.myapplicationfragments;
 
 
+import android.annotation.SuppressLint;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
@@ -16,6 +19,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.google.android.material.tabs.TabLayout;
+
+import static com.example.myapplicationfragments.R.font.poppins_bold;
 
 
 /**
@@ -31,6 +36,8 @@ public class NewsFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_news, container, false);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    @SuppressLint("ResourceType")
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -41,7 +48,7 @@ public class NewsFragment extends Fragment {
         tabLayout.setupWithViewPager(viewPager);
 //        final String[] category = {"sports"};
         tabLayout.getTabAt(0).setIcon(R.drawable.list);
-        tabLayout.getTabAt(1).setText("SPORTS");
+        tabLayout.getTabAt(1).setText("Sports");
 
         setTabWeight(tabLayout, 0, 1);
         setTabWeight(tabLayout, 1, 4);

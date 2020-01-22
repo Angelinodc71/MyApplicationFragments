@@ -7,4 +7,13 @@
             android:gravity="center"
             android:tint="@color/black"/>
     </item>
+    <item android:drawable="@drawable/btn_redondeado_transparente_black"
+        android:width="200dp" android:height="150dp" android:gravity="center">
+        <item>
+            <bitmap
+                android:src="@drawable/news_logo"
+                android:gravity="center"
+                android:tint="@color/black"/>
+        </item>
+    </item>
 </layer-list>

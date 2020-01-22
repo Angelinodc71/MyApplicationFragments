@@ -55,4 +55,17 @@
     <string name="please_enter_your_email_or_phone_number_to_search_for_your_account">
         Ingrese su correo electrónico o número de teléfono para buscar su cuenta
     </string>
+
+    <string name="menu">Menu</string>
+    <string name="news">Noticias</string>
+    <string name="message">Mensaje</string>
+    <string name="block_font">Bloquear fuente</string>
+    <string name="home">Home</string>
+    <string name="favourite">Favorito</string>
+    <string name="share">Compartir</string>
+    <string name="web">Web</string>
+
+    <string name="deja_un_comentario">deja un comentario</string>
+    <string name="comentario">comentario</string>
+    <string name="publicar_comentario">Publicar comentario</string>
 </resources>

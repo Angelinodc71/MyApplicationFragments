@@ -4,23 +4,27 @@
     <item
         android:id="@+id/blockFragment"
         android:icon="@drawable/ic_sin_telefono_1"
-        android:title="Block font" />
+        android:title="@string/block_font"
+        android:enabled="false"/>
 
     <item
         android:id="@+id/webFragment"
         android:icon="@drawable/ic_web_1"
-        android:title="Web" />
+        android:title="@string/web"
+        android:enabled="false"/>
 
     <item
         android:id="@+id/newsFragment"
         android:icon="@drawable/ic_periodico"
-        android:title="Home" />
+        android:title="@string/home" />
     <item
         android:id="@+id/favouriteFragment"
         android:icon="@drawable/ic_saved_icon"
-        android:title="Favourite" />
+        android:title="@string/favourite"
+        android:enabled="false"/>
     <item
         android:id="@+id/compartirFragment"
         android:icon="@drawable/ic_participacion_1"
-        android:title="Share" />
+        android:title="@string/share"
+        android:enabled="false"/>
 </menu>

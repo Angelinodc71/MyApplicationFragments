@@ -1,28 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item
-        android:id="@+id/menuFragment"
-        android:icon="@drawable/ic_menu"
-        android:title="Menu"
-        android:actionLayout="@layout/fragment_menu"
-        />
-
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:http="http://schemas.android.com/tools">
     <item
         android:id="@+id/newsFragment"
         android:icon="@drawable/ic_periodico"
-        android:title="News"
-        android:stateListAnimator="@null"/>
+        android:title="@string/news" />
 
     <item
         android:id="@+id/messageFragment"
         android:icon="@drawable/ic_mensage_icon"
-        android:title="Message"
-        android:stateListAnimator="@null"/>
+        android:title="@string/message"/>
     <item
         android:id="@+id/favouriteFragment"
         android:icon="@drawable/ic_saved_icon"
-        android:title="Favourites"
-        android:actionLayout="@layout/fragment_favourite"/>
-
+        android:title="@string/favourites"/>
+    <item
+        android:id="@+id/menuFragment"
+        android:icon="@drawable/ic_menu"
+        android:title="@string/menu"/>
 </menu>

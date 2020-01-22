@@ -46,4 +46,15 @@
     <string name="notificaciones">Notifications</string>
     <string name="we_have_sent_your_code_to">We have sent your code to:</string>
     <string name="please_enter_your_email_or_phone_number_to_search_for_your_account">Please enter your email or phone number to search for your account</string>
+    <string name="menu">Menu</string>
+    <string name="news">News</string>
+    <string name="message">Message</string>
+    <string name="block_font">Block font</string>
+    <string name="web">Web</string>
+    <string name="home">Home</string>
+    <string name="favourite">Favourite</string>
+    <string name="share">Share</string>
+    <string name="deja_un_comentario">Leave a comment</string>
+    <string name="comentario">comment</string>
+    <string name="publicar_comentario">Post comment</string>
 </resources>
