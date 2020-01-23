@@ -83,12 +83,12 @@ public class MainActivity extends AppCompatActivity {
                         navView.getMenu().clear();
                         navView.inflateMenu(R.menu.bottom_nav_menu2);
                         tipoMenu = 2;
-                        getSupportActionBar().show();
+                        getSupportActionBar().hide();
                         break;
                     default:
 //                      toolbar.setVisibility(View.VISIBLE);
                         navView.setVisibility(View.VISIBLE);
-                        getSupportActionBar().show();
+                        getSupportActionBar().hide();
                         if(tipoMenu != 0){
                             navView.getMenu().clear();
                             navView.inflateMenu(R.menu.bottom_nav_menu);
@@ -96,5 +96,6 @@ public class MainActivity extends AppCompatActivity {
                         tipoMenu = 0;
                 }
             }
-        });    }
+        });
+    }
 }

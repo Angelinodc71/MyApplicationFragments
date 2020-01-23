@@ -5,7 +5,7 @@
     <string name="text_subrayadoLogin"><u>Has olvidado tu contraseña?</u></string>
     <string name="text_subrayadoRegister"><u>Inicia sesión aquí</u></string>
     <string name="title_activity_menu_fragment">MenuFragment</string>
-    <string name="or">&amp;</string>
+    <string name="or">o</string>
     <string name="login_with_facebook">Inicia sesión con Facebook</string>
     <string name="login">Inicia sesión</string>
     <string name="register">Registrar</string>
@@ -69,8 +69,18 @@
     <string name="comentario">comentario</string>
     <string name="publicar_comentario">Publicar comentario</string>
 
+    <string name="you_haven_t_no_friends_do_you_want_to_add">No tienes amigos, quieres añadir ?</string>
+    <string name="no">No</string>
+    <string name="yes">Sí</string>
+
+
     <!--    Lorem ipsums -->
     <string name="lorem_ipsum_corto">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan molestie risus non facilisis.
+    </string>
+    <string name="lorem_ipsum_corto_x3">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan molestie risus non facilisis.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan molestie risus non facilisis.
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan molestie risus non facilisis.
     </string>
     <string name="lorem_ipsum">

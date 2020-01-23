@@ -9,7 +9,6 @@
     <color name="fondo">#2F303A</color>
     <color name="gris_fuerte">#757575</color>
     <color name="gris_claro">#E0E0E0</color>
-    <color name="gris_negro">#403f3f</color>
     <color name="verde_pastel">#27AE60</color>
     <color name="rojo_pastel">#EB5757</color>
     <color name="azul_facebook">#3333FF</color>
@@ -17,5 +16,6 @@
     <color name="verde_selec">#8EF092</color>
     <color name="naranja_pastel">#FFD7B1</color>
     <color name="naranja">#FEB700</color>
+    <color name="gris_negro">#5B6762</color>
 </resources>
 

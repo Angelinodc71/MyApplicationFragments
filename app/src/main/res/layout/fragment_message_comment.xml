@@ -3,12 +3,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MessageCommentFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MessageCommentFragment"
+    android:background="@color/gris_claro">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp">
+
+        <androidx.constraintlayout.widget.Group
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="barrier1,textView1,imageView1" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier1"
+            android:layout_width="56dp"
+            android:layout_height="60dp"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="imageView1" />
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/imageView1"
+            android:layout_width="56dp"
+            android:layout_height="60dp"
+            android:src="@drawable/image_8"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/barrier1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/poppins_bold"
+            android:lineSpacingMultiplier="0.75"
+            android:text="@string/lorem_ipsum_corto"
+            android:textColor="@color/gris_negro"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/barrier1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

@@ -85,4 +85,19 @@
         android:name="com.example.myapplicationfragments.MessageFriendFragment"
         android:label="fragment_message_friend"
         tools:layout="@layout/fragment_message_friend" />
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="com.example.myapplicationfragments.AboutUsFragment"
+        android:label="fragment_about_us"
+        tools:layout="@layout/fragment_about_us" />
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.example.myapplicationfragments.HelpFragment"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.myapplicationfragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>

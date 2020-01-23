@@ -3,12 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MessageFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
+        android:layout_height="wrap_content">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:tabMode="fixed"
+            app:tabGravity="fill"
+            app:tabMaxWidth="0dp"
+            app:tabTextColor="@color/black"
+            app:tabIndicator="@drawable/tab_indicator"
+            app:tabIndicatorColor="@color/verde_selec"
+            app:tabBackground="@color/verde_pastel"
+            app:tabTextAppearance="@style/TabLayoutTextFont">
+        </com.google.android.material.tabs.TabLayout>
+    </androidx.viewpager.widget.ViewPager>
 </FrameLayout>
