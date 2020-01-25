@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.NavDestination;
 import androidx.navigation.Navigation;
@@ -13,17 +14,19 @@ import androidx.navigation.ui.NavigationUI;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     Toolbar toolbar;
+    Button profileButton;
 
     int tipoMenu = 2;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         try {
@@ -39,14 +42,21 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         bottomNavigationView = findViewById(R.id.bottom_nav_view);
-
+        profileButton = findViewById(R.id.btn_profile);
 
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.homeFragment, R.id.loginFragment, R.id.registerFragment,R.id.newsFragment, R.id.messageFragment, R.id.favouriteFragment,
                 R.id.recoveryPasswordFragment, R.id.recoveryPasswordFragment2, R.id.recoveryPasswordFragment3, R.id.recoveryPasswordFragment4).build();
-        NavController navController = Navigation.findNavController(this,R.id.nav_host_fragment);
+        final NavController navController = Navigation.findNavController(this,R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this,navController,appBarConfiguration);
         NavigationUI.setupWithNavController(bottomNavigationView,navController);
+
+        profileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.profileFragment);
+            }
+        });
 
         navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
             @SuppressLint("ResourceType")
@@ -61,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.loginFragment:
 //                      toolbar.setVisibility(View.GONE);
                         bottomNavigationView.setVisibility(View.GONE);
-                        toolbar.setVisibility(View.VISIBLE);
+                        toolbar.setVisibility(View.GONE);
                         break;
                     case R.id.registerFragment:
                         toolbar.setVisibility(View.GONE);
@@ -96,7 +106,8 @@ public class MainActivity extends AppCompatActivity {
                     default:
 //                      toolbar.setVisibility(View.VISIBLE);
                         bottomNavigationView.setVisibility(View.VISIBLE);
-                        getSupportActionBar().hide();
+                        toolbar.setVisibility(View.VISIBLE);
+                        getSupportActionBar().show();
                         if(tipoMenu != 0){
                             bottomNavigationView.getMenu().clear();
                             bottomNavigationView.inflateMenu(R.menu.bottom_nav_menu);

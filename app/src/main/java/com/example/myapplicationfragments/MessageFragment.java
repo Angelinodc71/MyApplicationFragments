@@ -11,12 +11,15 @@ import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.navigation.Navigation;
 import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -44,6 +47,8 @@ public class MessageFragment extends Fragment {
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.getTabAt(0).setText("Comments");
         tabLayout.getTabAt(1).setText("Friends");
+
+
 
 //        Button buttonSports= view.findViewById(R.id.btn_sports);
 //        buttonSports.setOnClickListener(new View.OnClickListener() {

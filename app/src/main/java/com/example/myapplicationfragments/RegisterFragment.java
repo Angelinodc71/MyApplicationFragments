@@ -90,7 +90,7 @@ public class RegisterFragment extends Fragment {
             public void onChanged(AuthViewModel.EstadoDeLaAutenticacion estadoDeLaAutenticacion) {
                 switch (estadoDeLaAutenticacion){
                     case AUTENTICADO:
-                        navController.navigate(R.id.categoryOneFragment);
+                        navController.navigate(R.id.newsFragment);
                         break;
                 }
             }
