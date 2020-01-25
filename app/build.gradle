@@ -34,7 +34,7 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.firebase:firebase-auth:16.0.5'
     implementation 'com.google.android.material:material:1.0.0'
-    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+    implementation 'androidx.vectordrawable:vectordrawable:1.0.1'
     implementation 'androidx.navigation:navigation-fragment:2.0.0'
     implementation 'androidx.navigation:navigation-ui:2.0.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
@@ -59,6 +59,9 @@ dependencies {
 
     implementation 'androidx.room:room-runtime:2.1.0'
     annotationProcessor 'androidx.room:room-compiler:2.1.0'
+
+    implementation "com.mikepenz:itemanimators:1.1.0"
+    implementation 'com.github.GrenderG:Toasty:1.4.2'
 
     implementation 'com.github.IntruderShanky:Squint:3.0.1'
 }

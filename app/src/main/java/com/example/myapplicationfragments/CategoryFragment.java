@@ -57,7 +57,6 @@ public class CategoryFragment extends androidx.fragment.app.Fragment {
                 // de lo que te da el response o de noticias ??
             }
         });
-
     }
 
     class NoticiasAdapter extends  RecyclerView.Adapter<NoticiasAdapter.NoticiaViewHolder> {

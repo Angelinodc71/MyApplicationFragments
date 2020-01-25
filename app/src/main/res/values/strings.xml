@@ -60,6 +60,9 @@
     <string name="you_haven_t_no_friends_do_you_want_to_add">You haven\'t no friends, do you want to add ?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="about_us_newstoday">About us NewsToday</string>
+    <string name="leer_m_s_tarde">Read later</string>
+
 
 
     <!--    Lorem ipsums -->
@@ -84,5 +87,8 @@
         Sed magna augue, luctus eu luctus eu, cursus vel magna. Praesent nec est tellus. Nullam maximus arcu et laoreet dapibus. Quisque laoreet malesuada facilisis.
         Cras sapien dolor, malesuada nec nulla vitae, pretium dictum lorem. Vestibulum neque velit, facilisis vel metus id, aliquam vulputate ipsum.
     </string>
-    <string name="about_us_newstoday">About us NewsToday</string>
+
+    <string name="noticia_3">News 3</string>
+    <string name="noticia_2">News 2</string>
+    <string name="noticia_1">News 1</string>
 </resources>
