@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 
 /**
@@ -49,7 +50,34 @@ public class MenuFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Navigation.findNavController(view).navigate(R.id.aboutUsFragment);
-
+            }
+        });
+        Button buttonGeneral = view.findViewById(R.id.btn_general);
+        buttonGeneral.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toasty.info(getContext(), "Este fragment aun no esta disponible", Toast.LENGTH_SHORT, true).show();
+            }
+        });
+        Button buttonNotificacion = view.findViewById(R.id.btn_notifications);
+        buttonNotificacion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toasty.info(getContext(), "Este fragment aun no esta disponible", Toast.LENGTH_SHORT, true).show();
+            }
+        });
+        Button buttonBloqueado = view.findViewById(R.id.btn_blocked);
+        buttonBloqueado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toasty.info(getContext(), "Este fragment aun no esta disponible", Toast.LENGTH_SHORT, true).show();
+            }
+        });
+        Button buttonHistorial = view.findViewById(R.id.btn_history);
+        buttonHistorial.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toasty.info(getContext(), "Este fragment aun no esta disponible", Toast.LENGTH_SHORT, true).show();
             }
         });
     }
