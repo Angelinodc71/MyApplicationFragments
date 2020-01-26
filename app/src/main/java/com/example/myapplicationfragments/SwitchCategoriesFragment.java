@@ -44,7 +44,7 @@ public class SwitchCategoriesFragment extends Fragment {
         buttonBusiness.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toasty.info(getContext(), "Here is some info for you.", Toast.LENGTH_SHORT, true).show();
+                Toasty.info(getContext(), "Funcionalidad aún no disponible", Toast.LENGTH_SHORT, true).show();
             }
         });
 
@@ -52,7 +52,7 @@ public class SwitchCategoriesFragment extends Fragment {
         buttonEntertainment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toasty.info(getContext(), "Here is some info for you.", Toast.LENGTH_SHORT, true).show();
+                Toasty.info(getContext(), "Funcionalidad aún no disponible", Toast.LENGTH_SHORT, true).show();
             }
         });
 
@@ -60,7 +60,7 @@ public class SwitchCategoriesFragment extends Fragment {
         buttonGeneral.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toasty.info(getContext(), "Here is some info for you.", Toast.LENGTH_SHORT, true).show();
+                Toasty.info(getContext(), "Funcionalidad aún no disponible", Toast.LENGTH_SHORT, true).show();
             }
         });
 
@@ -68,7 +68,7 @@ public class SwitchCategoriesFragment extends Fragment {
         buttonHealth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toasty.info(getContext(), "Here is some info for you.", Toast.LENGTH_SHORT, true).show();
+                Toasty.info(getContext(), "Funcionalidad aún no disponible", Toast.LENGTH_SHORT, true).show();
             }
         });
 
@@ -76,7 +76,7 @@ public class SwitchCategoriesFragment extends Fragment {
         buttonScience.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toasty.info(getContext(), "Here is some info for you.", Toast.LENGTH_SHORT, true).show();
+                Toasty.info(getContext(), "Funcionalidad aún no disponible", Toast.LENGTH_SHORT, true).show();
             }
         });
 
@@ -84,7 +84,7 @@ public class SwitchCategoriesFragment extends Fragment {
         buttonSports.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toasty.info(getContext(), "Here is some info for you.", Toast.LENGTH_SHORT, true).show();
+                Toasty.info(getContext(), "Funcionalidad aún no disponible", Toast.LENGTH_SHORT, true).show();
             }
         });
 
@@ -92,7 +92,7 @@ public class SwitchCategoriesFragment extends Fragment {
         buttonTecnology.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toasty.info(getContext(), "Here is some info for you.", Toast.LENGTH_SHORT, true).show();
+                Toasty.info(getContext(), "Funcionalidad aún no disponible", Toast.LENGTH_SHORT, true).show();
             }
         });
 

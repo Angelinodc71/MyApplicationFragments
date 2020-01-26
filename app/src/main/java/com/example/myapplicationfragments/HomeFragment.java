@@ -20,6 +20,8 @@ import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
 
+import es.dmoral.toasty.Toasty;
+
 
 /**
  * A simple {@link Fragment} subclass.

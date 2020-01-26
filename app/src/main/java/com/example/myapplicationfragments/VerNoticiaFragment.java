@@ -22,6 +22,8 @@ import com.bumptech.glide.Glide;
 import com.example.myapplicationfragments.model.NoticiaEverything;
 import com.example.myapplicationfragments.viewModel.PrincipalViewModel;
 
+import es.dmoral.toasty.Toasty;
+
 
 public class VerNoticiaFragment extends Fragment {
 

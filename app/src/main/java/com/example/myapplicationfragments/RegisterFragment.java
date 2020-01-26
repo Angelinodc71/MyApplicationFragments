@@ -20,6 +20,8 @@ import android.widget.Toast;
 
 import com.example.myapplicationfragments.viewModel.AuthViewModel;
 
+import es.dmoral.toasty.Toasty;
+
 
 public class RegisterFragment extends Fragment {
     EditText username,email, emailConfirm, password, passwordConfirm;
@@ -79,7 +81,7 @@ public class RegisterFragment extends Fragment {
             public void onChanged(AuthViewModel.EstadoDelRegistro estadoDelRegistro) {
                 switch (estadoDelRegistro){
                     case NOMBRE_NO_DISPONIBLE:
-                        Toast.makeText(getContext(), "NOMBRE DE USUARIO NO DISPONIBLE", Toast.LENGTH_SHORT).show();
+                        Toasty.info(getContext(), "NOMBRE DE USUARIO NO DISPONIBLE", Toast.LENGTH_SHORT).show();
                         break;
                 }
             }

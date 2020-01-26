@@ -14,6 +14,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
+import es.dmoral.toasty.Toasty;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -56,28 +58,28 @@ public class MenuFragment extends Fragment {
         buttonGeneral.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toasty.info(getContext(), "Este fragment aun no esta disponible", Toast.LENGTH_SHORT, true).show();
+                Toasty.info(getContext(), "Este fragment aún no esta disponible", Toast.LENGTH_SHORT, true).show();
             }
         });
         Button buttonNotificacion = view.findViewById(R.id.btn_notifications);
         buttonNotificacion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toasty.info(getContext(), "Este fragment aun no esta disponible", Toast.LENGTH_SHORT, true).show();
+                Toasty.info(getContext(), "Este fragment aún no esta disponible", Toast.LENGTH_SHORT, true).show();
             }
         });
         Button buttonBloqueado = view.findViewById(R.id.btn_blocked);
         buttonBloqueado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toasty.info(getContext(), "Este fragment aun no esta disponible", Toast.LENGTH_SHORT, true).show();
+                Toasty.info(getContext(), "Este fragment aún no esta disponible", Toast.LENGTH_SHORT, true).show();
             }
         });
         Button buttonHistorial = view.findViewById(R.id.btn_history);
         buttonHistorial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toasty.info(getContext(), "Este fragment aun no esta disponible", Toast.LENGTH_SHORT, true).show();
+                Toasty.info(getContext(), "Este fragment aún no esta disponible", Toast.LENGTH_SHORT, true).show();
             }
         });
     }

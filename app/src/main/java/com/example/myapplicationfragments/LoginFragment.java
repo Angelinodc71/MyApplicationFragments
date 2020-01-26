@@ -21,6 +21,8 @@ import android.widget.Toast;
 
 import com.example.myapplicationfragments.viewModel.AuthViewModel;
 
+import es.dmoral.toasty.Toasty;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -93,7 +95,7 @@ public class LoginFragment extends Fragment {
                         break;
 
                     case AUTENTICACION_INVALIDA:
-                        Toast.makeText(getContext(), "CREDENCIALES NO VALIDAS", Toast.LENGTH_SHORT).show();
+                        Toasty.info(getContext(), "CREDENCIALES NO VALIDAS", Toast.LENGTH_SHORT).show();
                         break;
                 }
             }
