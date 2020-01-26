@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -64,6 +65,14 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 Navigation.findNavController(view).navigate(R.id.newsFragment);
 
+            }
+        });
+
+        Button buttonFacebook = view.findViewById(R.id.btnFacebook);
+        buttonFacebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toasty.info(getContext(), "Esta funcionalidad no esta disponible", Toast.LENGTH_SHORT, true).show();
             }
         });
 
