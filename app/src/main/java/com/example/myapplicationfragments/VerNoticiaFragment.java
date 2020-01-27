@@ -63,8 +63,7 @@ public class VerNoticiaFragment extends Fragment {
             }
         });
 
-        Button buttonComment= view.findViewById(R.id.btn_post_comment);
-        buttonComment.setOnClickListener(new View.OnClickListener() {
+        Button buttonComment= view.findViewById(R.id.btn_post_comment);buttonComment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toasty.warning(getContext(), "De momento no se pueden añadir comentarios", Toast.LENGTH_SHORT, true).show();
